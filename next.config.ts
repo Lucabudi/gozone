@@ -4,7 +4,7 @@ const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig: NextConfig = {
   output: 'export',
-  assetPrefix: isProd ? '/gozone/' : '',
+  assetPrefix: isProd ? '/gozone' : '',
   basePath: isProd ? '/gozone' : '',
   images: {
     unoptimized: true,
