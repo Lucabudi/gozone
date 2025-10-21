@@ -15,14 +15,14 @@ const CursorEffect = () => {
   mixBlendMode: "difference",
 };
 
-const cursorCircleStyles = {
+const cursorCircleStyles: React.CSSProperties = {
   width: "40px",
   height: "40px",
   borderRadius: "50%",
   backgroundColor: "transparent",
-    border: "2px solid white",
+  border: "2px solid white",
   transformOrigin: "center",
-  pointerEvents: "none",
+  pointerEvents: "none" as React.CSSProperties["pointerEvents"],
   transition: `
     background-color 0.3s ease,
     width 0.3s ease,
@@ -31,8 +31,8 @@ const cursorCircleStyles = {
   `,
 };
 
-  const cursorRef = useRef(null);
-  const cursorCircleRef = useRef(null);
+  const cursorRef = useRef<HTMLDivElement>(null);
+  const cursorCircleRef = useRef<HTMLDivElement>(null);
   const mouse = useRef({ x: -100, y: -100 });
   const pos = useRef({ x: 0, y: 0 });
   const speed = 0.1;
