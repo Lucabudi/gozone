@@ -1,13 +1,15 @@
 {
   "name": "gozone-website",
   "version": "0.1.0",
+  "homepage": "https://lucaboudidat.github.io/gozone",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
     "output": "export",
-    "deploy": "next build && export && gh-pages -d out"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.9",
