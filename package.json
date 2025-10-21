@@ -4,8 +4,8 @@
   "homepage": "https://lucaboudidat.github.io/gozone",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "output": "export",
     "predeploy": "pnpm run build && pnpm run output && pnpm run postexport",
