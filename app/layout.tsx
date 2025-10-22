@@ -33,7 +33,7 @@ export default function RootLayout({
       >
         <Navbar />
          <CursorEffect />
-        {children}
+          {children}
         <Footer />
       </body>
     </html>
