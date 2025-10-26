@@ -14,7 +14,7 @@ const DropDownMenu = ({ scrolled, isMobile = false, onItemClick }) => {
             scrolled ? "text-gray-700" : "text-white"
           }`}
         >
-          Cosa facciamo
+          Cosa facciamo?
           <ChevronDown size={16} className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
         </button>
         {isOpen && (
