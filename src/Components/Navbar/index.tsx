@@ -20,47 +20,42 @@ const DropDownMenu = ({ scrolled, isMobile = false, onItemClick }) => {
         {isOpen && (
           <div className="pl-4 space-y-1 mt-1">
             <a 
-              href="#servizio1" 
+              href="/cosa-facciamo/geo-zone" 
               className={`block py-2 text-sm transition-colors duration-500 ${
                 scrolled ? "text-gray-600 hover:text-black" : "text-gray-300 hover:text-white"
               }`}
-              onClick={onItemClick}
             >
               Geo Zone  
             </a>
             <a 
-              href="#servizio2" 
+              href="/cosa-facciamo/psy-zone" 
               className={`block py-2 text-sm transition-colors duration-500 ${
                 scrolled ? "text-gray-600 hover:text-black" : "text-gray-300 hover:text-white"
               }`}
-              onClick={onItemClick}
-            >
+              >
               Psy Zone
             </a>
             <a 
-              href="#servizio3" 
+              href="/cosa-facciamo/anthropological-zone" 
               className={`block py-2 text-sm transition-colors duration-500 ${
                 scrolled ? "text-gray-600 hover:text-black" : "text-gray-300 hover:text-white"
               }`}
-              onClick={onItemClick}
-            >
+              >
               Anthropological Zone
             </a>
             <a 
-              href="#servizio4" 
+              href="/cosa-facciamo/economic-zone" 
               className={`block py-2 text-sm transition-colors duration-500 ${
                 scrolled ? "text-gray-600 hover:text-black" : "text-gray-300 hover:text-white"
               }`}
-              onClick={onItemClick}
             >
               Economic Zone
             </a>
             <a 
-              href="#servizio5" 
+              href="/cosa-facciamo/progetti" 
               className={`block py-2 text-sm transition-colors duration-500 ${
                 scrolled ? "text-gray-600 hover:text-black" : "text-gray-300 hover:text-white"
               }`}
-              onClick={onItemClick}
             >
               I nostri Progetti
             </a>
@@ -89,19 +84,19 @@ const DropDownMenu = ({ scrolled, isMobile = false, onItemClick }) => {
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
         >
-          <a href="#servizio1" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+          <a href="/cosa-facciamo/geo-zone" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
             Geo Zone  
           </a>
-          <a href="#servizio2" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+          <a href="/cosa-facciamo/psy-zone" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
             Psy Zone
           </a>
-          <a href="#servizio3" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+          <a href="/cosa-facciamo/anthropological-zone" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
             Anthropological Zone
           </a>
-          <a href="#servizio4" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+          <a href="/cosa-facciamo/economic-zone" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
             Economic Zone
           </a>
-          <a href="#servizio5" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+          <a href="/cosa-facciamo/progetti" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
             I nostri Progetti
           </a>
         </div>

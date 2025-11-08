@@ -1,19 +1,21 @@
 import { useState, useEffect } from "react";
 
 
-export const HeroSection = ({ text, height = "100vh" }: { text: string; height?: number | string }) => {
-  
+export const HeroSection = ({ text, height = "100vh", animation = true }: { text: string; height?: number | string; animation?: boolean }) => {
+
   function TypingHeading() {
     const [displayedText, setDisplayedText] = useState("");
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
-      if (index < text.length) {
+      if (animation && index < text.length) {
         const timeout = setTimeout(() => {
           setDisplayedText((prev) => prev + text[index]);
           setIndex(index + 1);
         }, 200); // typing speed (ms)
         return () => clearTimeout(timeout);
+      } else {
+        setDisplayedText(text);
       }
     }, [index]);
 
