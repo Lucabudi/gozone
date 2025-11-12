@@ -8,6 +8,7 @@ import EconomicZone from './Pages/CosaFacciamo/EconomicZone'
 import PsyZone from './Pages/CosaFacciamo/PsyZone'
 import Projects from './Pages/CosaFacciamo/Projects'
 import AnthropologicalZone from './Pages/CosaFacciamo/AnthropologicalZone'
+import SportelloPage from './Pages/Sportello'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/cosa-facciamo/economic-zone" element={<EconomicZone />} />
           <Route path="/cosa-facciamo/psy-zone" element={<PsyZone />} />
           <Route path="/cosa-facciamo/progetti" element={<Projects />} />
+          <Route path="/sportello-psicologico" element={<SportelloPage />} />
         </Routes>
       </Layout>
     </BrowserRouter>

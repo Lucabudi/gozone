@@ -164,7 +164,7 @@ export default function Navbar() {
                 <DropDownMenu scrolled={scrolled} />
               </div>
               <a
-                href="#sportello"
+                href="/sportello-psicologico"
                 className={`ease-out text-md font-bold transition-colors duration-500 ${
                   scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
                 } hover:underline`}
@@ -253,7 +253,7 @@ export default function Navbar() {
             <DropDownMenu scrolled={scrolled} isMobile={true} onItemClick={closeMenu} />
             
             <a
-              href="#sportello"
+              href="/sportello-psicologico"
               className={`block py-2 font-bold transition-colors duration-500 ${
                 scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
               }`}
