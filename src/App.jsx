@@ -7,8 +7,9 @@ import ChiSiamo from './Pages/ChiSiamo'
 import EconomicZone from './Pages/CosaFacciamo/EconomicZone'
 import PsyZone from './Pages/CosaFacciamo/PsyZone'
 import Projects from './Pages/CosaFacciamo/Projects'
-import AnthropologicalZone from './Pages/CosaFacciamo/AnthropologicalZone'
+import AnthropologicZone from './Pages/CosaFacciamo/AnthropologicZone'
 import SportelloPage from './Pages/Sportello'
+import StorieDiClima from './Pages/StorieDiClima'
 
 function App() {
   return (
@@ -18,11 +19,12 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/chi-siamo" element={<ChiSiamo />} />
           <Route path="/cosa-facciamo/geo-zone" element={<GeoZone />} />
-          <Route path="/cosa-facciamo/anthropological-zone" element={<AnthropologicalZone />} />
+          <Route path="/cosa-facciamo/anthropological-zone" element={<AnthropologicZone />} />
           <Route path="/cosa-facciamo/economic-zone" element={<EconomicZone />} />
           <Route path="/cosa-facciamo/psy-zone" element={<PsyZone />} />
           <Route path="/cosa-facciamo/progetti" element={<Projects />} />
           <Route path="/sportello-psicologico" element={<SportelloPage />} />
+          <Route path="/storie-di-clima" element={<StorieDiClima />} />
         </Routes>
       </Layout>
     </BrowserRouter>

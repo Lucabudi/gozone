@@ -23,11 +23,11 @@ export default function Footer() {
         {/* --- Colonna 2: Newsletter --- */}
         <div className="bg-[#2e6750] text-white rounded-lg p-6 text-center flex flex-col items-center justify-center">
           <h3 className="text-xl font-semibold mb-4">
-            Vuoi ricevere la newsletter?
+            Seguici sui nostri canali
           </h3>
-          <button className="bg-[#c8a4f6] text-[#1f1f1f] font-semibold px-6 py-2 rounded-full hover:bg-[#b68ef3] transition">
+          {/* <button className="bg-[#c8a4f6] text-[#1f1f1f] font-semibold px-6 py-2 rounded-full hover:bg-[#b68ef3] transition">
             Iscriviti!
-          </button>
+          </button> */}
 
           {/* Social icons */}
           <div className="flex gap-4 mt-6">
@@ -49,10 +49,13 @@ export default function Footer() {
             TROVI LO SPORTELLO PSICOLOGICO QUI:
           </h3>
           <div className="relative w-full h-40 rounded-md overflow-hidden shadow-sm">
-            <img
-              src="/images/map.jpg" // 👉 Inserisci un'immagine in /public/images/map.jpg
-              alt="Mappa posizione"
-              className="object-cover"
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5564.525169904644!2d11.876723536958366!3d45.39694199980005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477edbab1f9eaaab%3A0x50dce54579d95bc0!2sVia%20Cavazzana%2C%205%2C%2035123%20Padova%20PD!5e0!3m2!1sit!2sit!4v1763486902261!5m2!1sit!2sit"
+              width="600"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
         </div>

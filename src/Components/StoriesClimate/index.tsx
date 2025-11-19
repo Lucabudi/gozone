@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Button } from "../Ui/Button";
 
 export default function ClimateStories({ title, array }: { title: string, array: any[] }) {
   
@@ -45,12 +46,10 @@ export default function ClimateStories({ title, array }: { title: string, array:
 
         {/* Bottom button */}
         <div className="text-center mt-12">
-          <a
-            href="#"
-            className="inline-block bg-[#394d5e] text-white px-10 py-3 rounded-full text-lg font-semibold hover:bg-[#2c3e4d] transition"
-          >
-            SCOPRI TUTTE LE STORIE (LINK NEWS)
-          </a>
+          <Button
+            text="SCOPRI TUTTE LE STORIE"
+            onClick={() => window.location.href = "/storie-di-clima"}
+          />
         </div>
       </div>
     </section>

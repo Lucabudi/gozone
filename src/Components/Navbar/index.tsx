@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import { Button } from '../Ui/Button';
 
 // Componente DropDownMenu
 const DropDownMenu = ({ scrolled, isMobile = false, onItemClick }) => {
@@ -41,7 +42,7 @@ const DropDownMenu = ({ scrolled, isMobile = false, onItemClick }) => {
                 scrolled ? "text-gray-600 hover:text-black" : "text-gray-300 hover:text-white"
               }`}
               >
-              Anthropological Zone
+              Anthropologic Zone
             </a>
             <a 
               href="/cosa-facciamo/economic-zone" 
@@ -91,7 +92,7 @@ const DropDownMenu = ({ scrolled, isMobile = false, onItemClick }) => {
             Psy Zone
           </a>
           <a href="/cosa-facciamo/anthropological-zone" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-            Anthropological Zone
+            Anthropologic Zone
           </a>
           <a href="/cosa-facciamo/economic-zone" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
             Economic Zone
@@ -109,11 +110,13 @@ const DropDownMenu = ({ scrolled, isMobile = false, onItemClick }) => {
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [currentPath, setCurrentPath] = useState('/');
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
   useEffect(() => {
+    setCurrentPath(window.location.pathname);
     const handleScroll = () => {
       if (window.scrollY > 50) {
         setScrolled(true);
@@ -141,7 +144,7 @@ export default function Navbar() {
               href="/"
               className={`text-2xl font-bold transition-colors duration-500 ${
                 scrolled ? "text-gray-900" : "text-white"
-              }`}
+              } `}
             >
               MyWebsite
             </a>
@@ -152,7 +155,7 @@ export default function Navbar() {
                 href="/chi-siamo"
                 className={`ease-out text-md font-bold transition-colors duration-500 ${
                   scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
-                } hover:underline`}
+                } ${currentPath === '/chi-siamo' ? 'underline' : ''}`}
               >
                 Chi siamo
               </a>
@@ -161,21 +164,21 @@ export default function Navbar() {
                   scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
                 }`}
               >
-                <DropDownMenu scrolled={scrolled} />
+                <DropDownMenu scrolled={scrolled} onItemClick={() => {}} />
               </div>
               <a
                 href="/sportello-psicologico"
                 className={`ease-out text-md font-bold transition-colors duration-500 ${
                   scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
-                } hover:underline`}
+                } ${currentPath === '/sportello-psicologico' ? 'underline' : ''}`}
               >
                 Sportello psicologico
               </a>
               <a
-                href="#storie"
+                href="/storie-di-clima"
                 className={`ease-out text-md font-bold transition-colors duration-500 ${
                   scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
-                } hover:underline`}
+                } ${currentPath === '/storie-di-clima' ? 'underline' : ''}`}
               >
                 Storie di clima
               </a>
@@ -183,39 +186,24 @@ export default function Navbar() {
                 href="#biblioteca"
                 className={`ease-out text-md font-bold transition-colors duration-500 ${
                   scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
-                } hover:underline`}
+                } ${currentPath === '#biblioteca' ? 'underline' : ''}`}
               >
                 Risorse in biblioteca
               </a>
-              <a
+              {/* <a
                 href="#contatti"
                 className={`ease-out text-md font-bold transition-colors duration-500 ${
                   scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
-                } hover:underline`}
+                } ${currentPath === '#contatti' ? 'underline' : ''}`}
               >
                 Contatti
-              </a>
+              </a> */}
             </div>
 
             <div className="hidden md:flex space-x-2">
-              <button
-                className={`px-4 py-2 rounded transition-colors duration-500 ${
-                  scrolled
-                    ? "bg-blue-600 text-white hover:bg-blue-700"
-                    : "bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm"
-                }`}
-              >
-                Volontari
-              </button>
-              <button
-                className={`px-4 py-2 rounded transition-colors duration-500 ${
-                  scrolled
-                    ? "bg-gray-200 text-gray-800 hover:bg-gray-300"
-                    : "bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm"
-                }`}
-              >
-                Sostienici
-              </button>
+              <Button onClick={() => {}} text="Volontari" variant='outline' />
+
+              <Button onClick={() => {}} text="Sostienici" />
             </div>
 
             {/* Mobile Menu Button */}
@@ -244,28 +232,26 @@ export default function Navbar() {
               href="/chi-siamo"
               className={`block py-2 font-bold transition-colors duration-500 ${
                 scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
-              }`}
+              } ${currentPath === '/chi-siamo' ? 'underline' : ''}`}
               onClick={closeMenu}
             >
               Chi siamo
             </a>
-            
             <DropDownMenu scrolled={scrolled} isMobile={true} onItemClick={closeMenu} />
-            
             <a
               href="/sportello-psicologico"
               className={`block py-2 font-bold transition-colors duration-500 ${
                 scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
-              }`}
+              } ${currentPath === '/sportello-psicologico' ? 'underline' : ''}`}
               onClick={closeMenu}
             >
               Sportello psicologico
             </a>
             <a
-              href="#storie"
+              href="/storie-di-clima"
               className={`block py-2 font-bold transition-colors duration-500 ${
                 scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
-              }`}
+              } ${currentPath === '/storie-di-clima' ? 'underline' : ''}`}
               onClick={closeMenu}
             >
               Storie di clima
@@ -274,7 +260,7 @@ export default function Navbar() {
               href="#biblioteca"
               className={`block py-2 font-bold transition-colors duration-500 ${
                 scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
-              }`}
+              } ${currentPath === '#biblioteca' ? 'underline' : ''}`}
               onClick={closeMenu}
             >
               Risorse in biblioteca
@@ -283,7 +269,7 @@ export default function Navbar() {
               href="#contatti"
               className={`block py-2 font-bold transition-colors duration-500 ${
                 scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
-              }`}
+              } ${currentPath === '#contatti' ? 'underline' : ''}`}
               onClick={closeMenu}
             >
               Contatti
