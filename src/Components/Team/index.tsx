@@ -66,30 +66,55 @@ const Team = () => {
         <h1 className="text-5xl font-bold mb-12 text-gray-900">IL TEAM</h1>
         
         <div className="space-y-16">
-          {teamMembers.map((member) => (
-            <div 
-              key={member.id}
-              className={`flex ${member.position === 'right' ? 'flex-row-reverse' : 'flex-row'} items-start gap-8 align-center`}
-            >
-              <div className="relative flex-shrink-0">
-                <div className="w-48 h-48 rounded-full overflow-hidden bg-gradient-to-br from-pink-400 via-purple-400 to-blue-400 p-1">
-                  <img 
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full rounded-full object-cover bg-white"
-                  />
+          {teamMembers.map((member, index) => (
+            <React.Fragment key={member.id}>
+              {index === 0 && (
+                <div className="mb-16">
+                  <h2 className="text-3xl font-semibold text-gray-800 mb-4">Referenti GEO ZONE</h2>
+                  <hr className="border-t-2 border-gray-300" />
+                </div>
+              )}
+              {index === 2 && (
+                <div className="mb-16">
+                  <h2 className="text-3xl font-semibold text-gray-800 mb-4">Referenti PSY ZONE</h2>
+                  <hr className="border-t-2 border-gray-300" />
+                </div>
+              )}
+              {index === 4 && (
+                <div className="mb-16">
+                  <h2 className="text-3xl font-semibold text-gray-800 mb-4">Referenti CIRCULAR ZONE</h2>
+                  <hr className="border-t-2 border-gray-300" />
+                </div>
+              )}
+              {index === 6 && (
+                <div className="mb-16">
+                  <h2 className="text-3xl font-semibold text-gray-800 mb-4">Referenti ANTHRO ZONE</h2>
+                  <hr className="border-t-2 border-gray-300" />
+                </div>
+              )}
+              <div
+                className={`flex ${member.position === 'right' ? 'flex-row-reverse' : 'flex-row'} items-start gap-8 align-center`}
+              >
+                <div className="relative flex-shrink-0">
+                  <div className="w-48 h-48 rounded-full overflow-hidden bg-gradient-to-br from-pink-400 via-purple-400 to-blue-400 p-1">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full rounded-full object-cover bg-white"
+                    />
+                  </div>
+                </div>
+
+                <div className={`flex-1 ${member.position === 'right' ? 'text-right' : 'text-left'}`}>
+                  <p className="text-md font-semibold text-gray-900 mb-2">
+                    {member.name}: {member.role}
+                  </p>
+                  <div className="w-full mt-4">
+                    <p dangerouslySetInnerHTML={{ __html: member.description }} />
+                  </div>
                 </div>
               </div>
-              
-              <div className={`flex-1 ${member.position === 'right' ? 'text-right' : 'text-left'}`}>
-                <p className="text-md font-semibold text-gray-900 mb-2">
-                  {member.name}: {member.role}
-                </p>
-                <div className="w-full mt-4">
-                  <p dangerouslySetInnerHTML={{ __html: member.description }} />
-                </div>
-              </div>
-            </div>
+            </React.Fragment>
           ))}
         </div>
       </div>
