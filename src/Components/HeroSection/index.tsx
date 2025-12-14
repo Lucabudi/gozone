@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 
-export const HeroSection = ({ text, height = "100vh", animation = true }: { text: string; height?: number | string; animation?: boolean }) => {
+export const HeroSection = ({ text, height = "100vh", animation = true, backgroundImage = '' }: { text: string; height?: number | string; animation?: boolean; backgroundImage?: string }) => {
 
   function TypingHeading() {
     const [displayedText, setDisplayedText] = useState("");
@@ -31,7 +31,7 @@ export const HeroSection = ({ text, height = "100vh", animation = true }: { text
     <div
       style={{
         height: height,
-        backgroundImage: `url('/backgroundhome.webp')`,
+        backgroundImage: `url('${backgroundImage || '/backgroundhome.webp'}')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
