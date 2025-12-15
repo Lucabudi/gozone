@@ -12,7 +12,11 @@ const DropDownMenu = ({ scrolled, isMobile = false, onItemClick }) => {
         <button
           onClick={() => setIsOpen(!isOpen)}
           className={`w-full flex items-center justify-between py-2 font-bold transition-colors duration-500 ${
-            scrolled ? "text-gray-700" : "text-white"
+            window.location.pathname === '/risorse'
+              ? 'text-black'
+              : scrolled
+                ? 'text-gray-700'
+                : 'text-white'
           }`}
         >
           Cosa facciamo?
@@ -73,7 +77,11 @@ const DropDownMenu = ({ scrolled, isMobile = false, onItemClick }) => {
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
         className={`flex items-center space-x-1 font-bold transition-colors duration-500 ${
-          scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
+          window.location.pathname === '/risorse'
+            ? 'text-black'
+            : scrolled
+              ? 'text-gray-700 hover:text-black'
+              : 'text-white hover:text-gray-300'
         }`}
       >
         Cosa facciamo
@@ -154,14 +162,22 @@ export default function Navbar() {
               <a
                 href="/chi-siamo"
                 className={`ease-out text-md font-bold transition-colors duration-500 ${
-                  scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
+                  currentPath === '/risorse'
+                    ? 'text-black'
+                    : scrolled
+                      ? 'text-gray-700 hover:text-black'
+                      : 'text-white hover:text-gray-300'
                 } ${currentPath === '/chi-siamo' ? 'underline' : ''}`}
               >
                 Chi siamo
               </a>
               <div
                 className={`text-md transition-colors duration-500 ${
-                  scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
+                  currentPath === '/risorse'
+                    ? 'text-black'
+                    : scrolled
+                      ? 'text-gray-700 hover:text-black'
+                      : 'text-white hover:text-gray-300'
                 }`}
               >
                 <DropDownMenu scrolled={scrolled} onItemClick={() => {}} />
@@ -169,7 +185,11 @@ export default function Navbar() {
               <a
                 href="/sportello-psicologico"
                 className={`ease-out text-md font-bold transition-colors duration-500 ${
-                  scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
+                  currentPath === '/risorse'
+                    ? 'text-black'
+                    : scrolled
+                      ? 'text-gray-700 hover:text-black'
+                      : 'text-white hover:text-gray-300'
                 } ${currentPath === '/sportello-psicologico' ? 'underline' : ''}`}
               >
                 Sportello psicologico
@@ -177,16 +197,24 @@ export default function Navbar() {
               <a
                 href="/storie-di-clima"
                 className={`ease-out text-md font-bold transition-colors duration-500 ${
-                  scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
+                  currentPath === '/risorse'
+                    ? 'text-black'
+                    : scrolled
+                      ? 'text-gray-700 hover:text-black'
+                      : 'text-white hover:text-gray-300'
                 } ${currentPath === '/storie-di-clima' ? 'underline' : ''}`}
               >
                 Storie di clima
               </a>
               <a
-                href="#biblioteca"
+                href="/risorse"
                 className={`ease-out text-md font-bold transition-colors duration-500 ${
-                  scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
-                } ${currentPath === '#biblioteca' ? 'underline' : ''}`}
+                  currentPath === '/risorse'
+                    ? 'text-black underline'
+                    : scrolled
+                      ? 'text-gray-700 hover:text-black'
+                      : 'text-white hover:text-gray-300'
+                }`}
               >
                 Risorse in biblioteca
               </a>
@@ -231,7 +259,11 @@ export default function Navbar() {
             <a
               href="/chi-siamo"
               className={`block py-2 font-bold transition-colors duration-500 ${
-                scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
+                currentPath === '/risorse'
+                  ? 'text-black'
+                  : scrolled
+                    ? 'text-gray-700 hover:text-black'
+                    : 'text-white hover:text-gray-300'
               } ${currentPath === '/chi-siamo' ? 'underline' : ''}`}
               onClick={closeMenu}
             >
@@ -241,7 +273,11 @@ export default function Navbar() {
             <a
               href="/sportello-psicologico"
               className={`block py-2 font-bold transition-colors duration-500 ${
-                scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
+                currentPath === '/risorse'
+                  ? 'text-black'
+                  : scrolled
+                    ? 'text-gray-700 hover:text-black'
+                    : 'text-white hover:text-gray-300'
               } ${currentPath === '/sportello-psicologico' ? 'underline' : ''}`}
               onClick={closeMenu}
             >
@@ -250,17 +286,25 @@ export default function Navbar() {
             <a
               href="/storie-di-clima"
               className={`block py-2 font-bold transition-colors duration-500 ${
-                scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
+                currentPath === '/risorse'
+                  ? 'text-black'
+                  : scrolled
+                    ? 'text-gray-700 hover:text-black'
+                    : 'text-white hover:text-gray-300'
               } ${currentPath === '/storie-di-clima' ? 'underline' : ''}`}
               onClick={closeMenu}
             >
               Storie di clima
             </a>
             <a
-              href="#biblioteca"
+              href="/risorse"
               className={`block py-2 font-bold transition-colors duration-500 ${
-                scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
-              } ${currentPath === '#biblioteca' ? 'underline' : ''}`}
+                currentPath === '/risorse'
+                  ? 'text-black underline'
+                  : scrolled
+                    ? 'text-gray-700 hover:text-black'
+                    : 'text-white hover:text-gray-300'
+              }`}
               onClick={closeMenu}
             >
               Risorse in biblioteca
@@ -268,7 +312,11 @@ export default function Navbar() {
             <a
               href="#contatti"
               className={`block py-2 font-bold transition-colors duration-500 ${
-                scrolled ? "text-gray-700 hover:text-black" : "text-white hover:text-gray-300"
+                currentPath === '/risorse'
+                  ? 'text-black'
+                  : scrolled
+                    ? 'text-gray-700 hover:text-black'
+                    : 'text-white hover:text-gray-300'
               } ${currentPath === '#contatti' ? 'underline' : ''}`}
               onClick={closeMenu}
             >

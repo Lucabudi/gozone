@@ -8,8 +8,8 @@ export default function Footer() {
         <div className="space-y-4">
           <h3 className="text-lg font-semibold text-gray-900">Contatti</h3>
           <ul className="text-gray-700 space-y-1">
-            <li>Sede</li>
-            <li>E-mail</li>
+            <li>Via Cavazzana, 5, 35123 Padova PD</li>
+            <a href="mailto:info@go-zone.it">info@go-zone.it</a>
             <li>P. IVA</li>
           </ul>
 

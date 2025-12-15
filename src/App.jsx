@@ -10,6 +10,7 @@ import Projects from './Pages/CosaFacciamo/Projects'
 import AnthropologicZone from './Pages/CosaFacciamo/AnthropologicZone'
 import SportelloPage from './Pages/Sportello'
 import StorieDiClima from './Pages/StorieDiClima'
+import RisorseBiblioteca from './Pages/Risorse'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/cosa-facciamo/progetti" element={<Projects />} />
           <Route path="/sportello-psicologico" element={<SportelloPage />} />
           <Route path="/storie-di-clima" element={<StorieDiClima />} />
+          <Route path="/risorse" element={<RisorseBiblioteca />} />
         </Routes>
       </Layout>
     </BrowserRouter>
