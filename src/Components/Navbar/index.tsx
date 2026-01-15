@@ -3,7 +3,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '../Ui/Button';
 
 // Componente DropDownMenu
-const DropDownMenu = ({ scrolled, isMobile = false, onItemClick }) => {
+const DropDownMenu = ({ scrolled, isMobile = false, onItemClick } : { scrolled: boolean, isMobile?: boolean, onItemClick?: () => void }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   if (isMobile) {
@@ -228,12 +228,10 @@ export default function Navbar() {
               </a> */}
             </div>
 
-            <div className="hidden md:flex space-x-2">
-              <Button onClick={() => {}} text="Volontari" variant='outline' />
-
-              <Button onClick={() => {}} text="Sostienici" />
+            <div className="hidden md:flex space-x-2 text-white">
+              <Button onClick={() => {}} text="Volontari" variant='outline' scrolled />
+              <Button onClick={() => {}} text="Sostienici" scrolled />
             </div>
-
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}

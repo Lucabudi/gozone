@@ -31,7 +31,7 @@ export const HeroSection = ({ text, height = "100vh", animation = true, backgrou
     <div
       style={{
         height: height,
-        backgroundImage: `url('${backgroundImage || '/backgroundhome.webp'}')`,
+        backgroundImage: `url('${backgroundImage || '/backgroundhome.jpg'}')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

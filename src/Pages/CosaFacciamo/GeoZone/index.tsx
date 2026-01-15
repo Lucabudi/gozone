@@ -67,7 +67,6 @@ const GeoZone: React.FC = () => {
           <p className="text-2xl text-gray-700 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
             L'area dedicata allo studio e alla comunicazione delle trasformazioni geografiche e fisiche del clima
           </p>
-
           <div className="flex gap-4 justify-center">
             <button className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full font-semibold hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 flex items-center gap-2">
               Scopri di più
@@ -78,7 +77,7 @@ const GeoZone: React.FC = () => {
       </section>
 
       {/* Stats Section with Glass Morphism */}
-      <section className="relative z-10 px-6 py-32">
+      <section className="relative z-10 px-6 py-26">
         <div className="max-w-6xl mx-auto">
           <div className="backdrop-blur-xl bg-white/80 rounded-3xl p-12 border border-white/40 shadow-2xl shadow-blue-200/50">
             <div className="grid lg:grid-cols-2 gap-16">
@@ -175,7 +174,7 @@ const GeoZone: React.FC = () => {
       </section>
 
       {/* Mission Cards */}
-      <section className="relative z-10 px-6 py-32">
+      <section className="relative z-10 px-6 py-26">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full border border-purple-300 mb-6">
@@ -217,7 +216,7 @@ const GeoZone: React.FC = () => {
       </section>
 
       {/* Contacts Section */}
-      {/* <section className="relative z-10 px-6 py-32">
+      {/* <section className="relative z-10 px-6 py-26">
         <div className="max-w-4xl mx-auto">
           <div className="backdrop-blur-xl bg-gradient-to-br from-indigo-100/80 to-purple-100/80 rounded-3xl p-16 border border-indigo-200 text-center shadow-2xl shadow-indigo-200/50">
             <div className="flex justify-center mb-8">
