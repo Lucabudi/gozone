@@ -212,7 +212,7 @@ const ChiSiamo: React.FC = () => {
             </div>
           </FadeSlide>
 
-          <div style={{ display: "grid", gridTemplateColumns: screenX ? "1fr" : "1fr 1fr", gridTemplateRows: "auto auto", gap: 20, height: "100%" }}>
+          <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-8">
             {/* Large card: fiaba */}
             <FadeSlide className="" delay={0.05}>
               <div style={{ gridColumn: "span 2" }}>
