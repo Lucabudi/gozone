@@ -21,7 +21,7 @@ function App() {
           <Route path="/chi-siamo" element={<ChiSiamo />} />
           <Route path="/cosa-facciamo/geo-zone" element={<GeoZone />} />
           <Route path="/cosa-facciamo/anthropological-zone" element={<AnthropologicZone />} />
-          <Route path="/cosa-facciamo/economic-zone" element={<EconomicZone />} />
+          <Route path="/cosa-facciamo/circular-zone" element={<EconomicZone />} />
           <Route path="/cosa-facciamo/psy-zone" element={<PsyZone />} />
           <Route path="/cosa-facciamo/progetti" element={<Projects />} />
           <Route path="/sportello-psicologico" element={<SportelloPage />} />

@@ -279,7 +279,6 @@ const AnthropologicZone: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       {/* <section className="relative z-10 px-6 py-32 mb-32">
         <div className="max-w-4xl mx-auto">

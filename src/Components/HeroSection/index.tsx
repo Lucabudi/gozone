@@ -22,7 +22,6 @@ export const HeroSection = ({ text, height = "100vh", animation = true, backgrou
     return (
       <h1 className="text-6xl md:text-[120px] font-bold mb-4 text-center whitespace-pre-line">
         {displayedText}
-        <span className="border-r-2 border-white ml-1 animate-pulse">|</span>
       </h1>
     );
   }

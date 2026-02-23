@@ -51,7 +51,7 @@ const EconomicZone: React.FC = () => {
 
     return (
         <div className="home-page full-width"> 
-            <HeroSection text="Economic Zone" height="90vh" animation={false} backgroundImage="/economiczonebackground.jpg" />
+        <HeroSection text="Circular Zone" height="90vh" animation={false} backgroundImage="/economiczonebackground.jpg" />
         <section className="relative z-10 flex items-center justify-center px-8 py-24">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-2xl text-gray-700 max-w-3xl mx-auto mb-12 leading-relaxed font-light">

@@ -3,23 +3,23 @@ export const Aree = () => {
   const items = [
     {
       title: "GEO ZONE",
-      image: "/economiczone.jpg",
+      image: "/geohome.png",
       link: "cosa-facciamo/geo-zone",
     },
     {
       title: "PSY ZONE",
-      image: "/psyhomepg.jpg",
+      image: "/psyhome.png",
       link: "/cosa-facciamo/psy-zone",
     },
     {
       title: "ANTHROPOLOGIC ZONE",
-      image: "/antrohome.jpg",
+      image: "/antrohome.png",
       link: "/cosa-facciamo/anthropological-zone",
     },
     {
-      title: "ECONOMIC ZONE",
-      image: "/geozone.jpg",
-      link: "/cosa-facciamo/economic-zone",
+      title: "CIRCULAR ZONE",
+      image: "/economichome.png",
+      link: "/cosa-facciamo/circular-zone",
     },
   ];
 

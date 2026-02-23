@@ -52,7 +52,7 @@ const GeoZone: React.FC = () => {
         ></div>
       </div>
       {/* Hero Section */}
-      <section className="relative z-10  flex items-center justify-center px-8 py-24">
+      <section className="relative z-10  flex items-center justify-center px-8 py-20">
         <div className="max-w-6xl mx-auto text-center">
           {/* <div 
             className="inline-block mb-8"
@@ -64,20 +64,14 @@ const GeoZone: React.FC = () => {
             </div>
           </div> */}
           
-          <p className="text-2xl text-gray-700 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
-            L'area dedicata allo studio e alla comunicazione delle trasformazioni geografiche e fisiche del clima
-          </p>
-          <div className="flex gap-4 justify-center">
-            <button className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full font-semibold hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 flex items-center gap-2">
-              Scopri di più
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </div>
+          <h2 className="text-3xl font-bold text-gray-700 max-w-3xl mx-auto  leading-relaxed ">
+            L'area dedicata allo studio e alla comunicazione delle trasformazioni geografiche e fisiche del clima.
+          </h2>
         </div>
       </section>
 
       {/* Stats Section with Glass Morphism */}
-      <section className="relative z-10 px-6 py-26">
+      <section className="relative z-10 px-6 py-20">
         <div className="max-w-6xl mx-auto">
           <div className="backdrop-blur-xl bg-white/80 rounded-3xl p-12 border border-white/40 shadow-2xl shadow-blue-200/50">
             <div className="grid lg:grid-cols-2 gap-16">
@@ -97,8 +91,8 @@ const GeoZone: React.FC = () => {
                       37
                     </span>
                   </div>
-                  <p className="text-xl text-gray-700 font-light">
-                    miliardi di tonnellate di emissioni
+                  <p className="text-xl text-gray-700 font-bold">
+                    <b>miliardi</b> di tonnellate di emissioni
                   </p>
                   <p className="text-sm text-gray-600 mt-2">1990 → 2024</p>
                 </div>
@@ -108,7 +102,7 @@ const GeoZone: React.FC = () => {
                 </p>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <h3 className="text-2xl font-bold text-gray-900 mb-8">Alcuni effetti del cambiamento:</h3>
                 {[
                   "Deviazioni delle correnti oceaniche",
@@ -131,32 +125,30 @@ const GeoZone: React.FC = () => {
       </section>
 
       {/* Vision Section - Bento Style */}
-      <section className="relative z-10 px-6 py-24">
+      <section className="relative z-10 px-6 py-20">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black mb-6 bg-gradient-to-r from-cyan-600 to-emerald-600 bg-clip-text text-transparent">
-              Il Nostro Approccio
-            </h2>
-          </div>
-
           <div className="grid lg:grid-cols-2 gap-8">
-            <div className="lg:col-span-2 backdrop-blur-xl bg-gradient-to-br from-cyan-100/80 to-blue-100/80 rounded-3xl p-12 border border-cyan-200 shadow-xl shadow-cyan-200/50">
-              <h3 className="text-3xl font-bold mb-6 text-cyan-700">Guardare in Faccia alla Realtà</h3>
+            <div className="lg:col-span-2 backdrop-blur-xl rounded-3xl text-center">
+            <div className="mb-12">
+              <h3 className="text-3xl font-bold mb-6 text-cyan-700 uppercase">Guardare in Faccia alla Realtà</h3>
               <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                Guardare in faccia alla realtà non significa arrendersi. Al contrario, significa riconoscere che esiste ancora un ampio margine di azione. La sfida non è evitare il cambiamento, ma governarlo con intelligenza.
+                Non significa arrendersi. <br />Al contrario, significa riconoscere che esiste ancora un ampio <b>margine di azione</b>. La sfida non è evitare il cambiamento, ma governarlo con intelligenza, orientando le nostre società verso modi di abitare la Terra più <b>giusti, adattivi e consapevoli dei limiti biofisici.</b>
               </p>
-              <p className="text-xl text-gray-900 leading-relaxed font-semibold">
+              <p className="text-xl text-gray-700 leading-relaxed font-semibold">
                 Possiamo — e dobbiamo — scegliere come vivere questa transizione: investendo in conoscenza, immaginazione politica, responsabilità collettiva e partecipazione comunitaria.
               </p>
             </div>
-
+              <h5 className="text-3xl font-black mb-6 bg-gradient-to-r from-cyan-600 to-emerald-600 bg-clip-text text-transparent">
+                Per questo, in GEO ZONE dialogano e collaborano due discipline fondamentali:
+              </h5>
+            </div>
             <div className="backdrop-blur-xl bg-gradient-to-br from-emerald-100/80 to-teal-100/80 rounded-3xl p-10 border border-emerald-200 hover:border-emerald-400 hover:shadow-xl hover:shadow-emerald-200/50 transition-all duration-300 group">
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
                 <Globe className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-emerald-700">Geografia</h3>
               <p className="text-gray-700 leading-relaxed">
-                Come scienza delle relazioni tra luoghi, processi ambientali e comportamenti collettivi
+                Come <b>scienza delle relazioni</b> tra luoghi, processi ambientali e comportamenti collettivi
               </p>
             </div>
 
@@ -166,7 +158,7 @@ const GeoZone: React.FC = () => {
               </div>
               <h3 className="text-2xl font-bold mb-4 text-blue-700">Fisica del Clima</h3>
               <p className="text-gray-700 leading-relaxed">
-                Che studia i meccanismi energetici, le dinamiche atmosferiche, gli scambi radiativi e le forzanti del sistema climatico
+                Che studia i <b>meccanismi energetici</b>, le <b>dinamiche atmosferiche</b>, gli <b>scambi radiativi</b> e le forzanti del sistema climatico
               </p>
             </div>
           </div>
@@ -174,16 +166,10 @@ const GeoZone: React.FC = () => {
       </section>
 
       {/* Mission Cards */}
-      <section className="relative z-10 px-6 py-26">
+      <section className="relative z-10 px-6 py-12">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full border border-purple-300 mb-6">
-              <BookOpen className="w-6 h-6 text-purple-600" />
-              <span className="text-sm font-semibold text-purple-700">IL NOSTRO IMPEGNO</span>
-            </div>
-            <h2 className="text-5xl font-black bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              Quattro Pilastri
-            </h2>
+              <span className="text-xl font-semibold text-gray-700">Attraverso ricerca, formazione, divulgazione e progetti territoriali, ci impegniamo a:</span>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -214,33 +200,7 @@ const GeoZone: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Contacts Section */}
-      {/* <section className="relative z-10 px-6 py-26">
-        <div className="max-w-4xl mx-auto">
-          <div className="backdrop-blur-xl bg-gradient-to-br from-indigo-100/80 to-purple-100/80 rounded-3xl p-16 border border-indigo-200 text-center shadow-2xl shadow-indigo-200/50">
-            <div className="flex justify-center mb-8">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center shadow-xl">
-                <Users className="w-10 h-10 text-white" />
-              </div>
-            </div>
-            
-            <h2 className="text-4xl font-black mb-8 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Referenti
-            </h2>
-            
-            <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-              <div className="backdrop-blur-xl bg-white/80 rounded-2xl p-8 border border-indigo-200 hover:border-indigo-400 hover:bg-white hover:shadow-xl transition-all duration-300">
-                <p className="text-2xl font-bold text-gray-900">Giuseppe della Fera</p>
-              </div>
-              <div className="backdrop-blur-xl bg-white/80 rounded-2xl p-8 border border-purple-200 hover:border-purple-400 hover:bg-white hover:shadow-xl transition-all duration-300">
-                <p className="text-2xl font-bold text-gray-900">Stefano della Fera</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-        </div>
+      </div>
     </div>
     );
 };

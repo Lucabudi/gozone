@@ -49,12 +49,12 @@ const DropDownMenu = ({ scrolled, isMobile = false, onItemClick } : { scrolled: 
               Anthropologic Zone
             </a>
             <a 
-              href="/cosa-facciamo/economic-zone" 
+              href="/cosa-facciamo/circular-zone" 
               className={`block py-2 text-sm transition-colors duration-500 ${
                 scrolled ? "text-gray-600 hover:text-black" : "text-gray-300 hover:text-white"
               }`}
             >
-              Economic Zone
+              Circular Zone
             </a>
             <a 
               href="/cosa-facciamo/progetti" 
@@ -102,8 +102,8 @@ const DropDownMenu = ({ scrolled, isMobile = false, onItemClick } : { scrolled: 
           <a href="/cosa-facciamo/anthropological-zone" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
             Anthropologic Zone
           </a>
-          <a href="/cosa-facciamo/economic-zone" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-            Economic Zone
+          <a href="/cosa-facciamo/circular-zone" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+            Circular Zone
           </a>
           <a href="/cosa-facciamo/progetti" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
             I nostri Progetti
@@ -194,7 +194,7 @@ export default function Navbar() {
               >
                 Sportello psicologico
               </a>
-              <a
+              {/* <a
                 href="/storie-di-clima"
                 className={`ease-out text-md font-bold transition-colors duration-500 ${
                   currentPath === '/risorse'
@@ -205,8 +205,8 @@ export default function Navbar() {
                 } ${currentPath === '/storie-di-clima' ? 'underline' : ''}`}
               >
                 Storie di clima
-              </a>
-              <a
+              </a> */}
+              {/* <a
                 href="/risorse"
                 className={`ease-out text-md font-bold transition-colors duration-500 ${
                   currentPath === '/risorse'
@@ -217,7 +217,7 @@ export default function Navbar() {
                 }`}
               >
                 Risorse in biblioteca
-              </a>
+              </a> */}
               {/* <a
                 href="#contatti"
                 className={`ease-out text-md font-bold transition-colors duration-500 ${
@@ -281,7 +281,7 @@ export default function Navbar() {
             >
               Sportello psicologico
             </a>
-            <a
+            {/* <a
               href="/storie-di-clima"
               className={`block py-2 font-bold transition-colors duration-500 ${
                 currentPath === '/risorse'
@@ -293,8 +293,8 @@ export default function Navbar() {
               onClick={closeMenu}
             >
               Storie di clima
-            </a>
-            <a
+            </a> */}
+            {/* <a
               href="/risorse"
               className={`block py-2 font-bold transition-colors duration-500 ${
                 currentPath === '/risorse'
@@ -306,7 +306,7 @@ export default function Navbar() {
               onClick={closeMenu}
             >
               Risorse in biblioteca
-            </a>
+            </a> */}
             <a
               href="#contatti"
               className={`block py-2 font-bold transition-colors duration-500 ${
