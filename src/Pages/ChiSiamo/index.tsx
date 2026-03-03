@@ -204,17 +204,16 @@ const ChiSiamo: React.FC = () => {
       </section>
 
       {/* NAME ORIGIN — BENTO */}
-      <section style={{ padding: "60px 40px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+      <section className='flex justify-center' style={{ padding: "20px 40px" }}>
+        <div>
           <FadeSlide>
             <div style={{ textAlign: "center", marginBottom: 48 }}>
               <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.2em", color: "#16a34a", textTransform: "uppercase", marginBottom: 12 }}>L'origine del nome</p>
             </div>
           </FadeSlide>
-
           <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-8">
             {/* Large card: fiaba */}
-            <FadeSlide className="" delay={0.05}>
+            <FadeSlide className="h-full" delay={0.05}>
               <div style={{ gridColumn: "span 2" }}>
                 <div className="glass card-hover" style={{ borderRadius: 28, padding: 44, height: "100%", boxShadow: "0 4px 32px rgba(0,0,0,0.05)" }}>
                   <div style={{ fontSize: 42, marginBottom: 20 }}>📖</div>
@@ -225,10 +224,9 @@ const ChiSiamo: React.FC = () => {
                 </div>
               </div>
             </FadeSlide>
-
             {/* NASA card */}
-            <FadeSlide delay={0.1}>
-              <div className="card-hover" style={{ borderRadius: 28, padding: 40, background: "linear-gradient(135deg, #1e3a5f, #1e40af)", color: "white", boxShadow: "0 4px 32px rgba(30,64,175,0.25)" }}>
+            <FadeSlide delay={0.1} className='h-full'>
+              <div className="card-hover h-full" style={{ borderRadius: 28, padding: 40, background: "linear-gradient(135deg, rgb(30, 58, 95), rgb(30 143 175 / 99%))", color: "white", boxShadow: "0 4px 32px rgba(30,64,175,0.25)" }}>
                 <div style={{ fontSize: 38, marginBottom: 16 }}>🚀</div>
                 <h3 style={{ fontSize: 20, fontWeight: 700, marginBottom: 12 }}>La NASA lo ha adottato</h3>
                 <p style={{ fontSize: 14, lineHeight: 1.75, opacity: 0.85 }}>
@@ -238,8 +236,8 @@ const ChiSiamo: React.FC = () => {
               </div>
             </FadeSlide>
           </div>
-          <FadeSlide delay={0.2}>
-            <p style={{ fontSize: "clamp(16px, 2vw, 22px)", textAlign: "center", padding: "40px", fontWeight: 400, color: "#4b7c5a", maxWidth: 880, margin: "0 auto 40px", lineHeight: 1.7 }}>
+          <FadeSlide delay={0.2} className='mt-6 flex justify-center'>
+            <p style={{ fontSize: "clamp(16px, 2vw, 22px)", textAlign: "center", padding: "40px", fontWeight: 400, color: "#4b7c5a", maxWidth: 880, margin: "20 auto 40px", lineHeight: 1.7 }}>
                 Per noi è il nome perfetto in quanto desideriamo costruire spazi in cui persone e comunità possano vivere in equilibrio con l’ambiente, affrontando le sfide del cambiamento climatico senza perdere di vista la <strong>cura reciproca</strong> e il <strong>benessere collettivo</strong>.</p>
          </FadeSlide>
         </div>

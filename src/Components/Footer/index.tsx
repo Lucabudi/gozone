@@ -34,7 +34,7 @@ export default function Footer() {
             <a href="#" aria-label="Facebook">
               <Facebook className="w-5 h-5" />
             </a>
-            <a href="#" aria-label="Instagram">
+            <a href="https://www.instagram.com/_gozone?igsh=MXIzejdxcGE2bTJjbQ==" target="_blank" aria-label="Instagram">
               <Instagram className="w-5 h-5" />
             </a>
             <a href="#" aria-label="LinkedIn">

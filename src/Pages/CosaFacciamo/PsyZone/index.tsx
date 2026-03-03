@@ -227,7 +227,6 @@ const PsyZone: React.FC = () => {
                 SPORTELLO PSICOLOGICO
               </h2>
             </div>
-
             <div className="space-y-6 max-w-3xl mx-auto">
               <p className="text-xl text-gray-700 leading-relaxed text-center">
                 Il nostro servizio di supporto psicologico rivolto a tutte le persone che sentono la necessità di elaborare e condividere pensieri ed emozioni rispetto la crisi climatica.
@@ -263,33 +262,7 @@ const PsyZone: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Contacts Section */}
-      <section className="relative z-10 px-6 py-26">
-        <div className="max-w-4xl mx-auto">
-          <div className="backdrop-blur-xl bg-gradient-to-br from-violet-100/80 to-purple-100/80 rounded-3xl p-16 border border-violet-200 text-center shadow-2xl shadow-violet-200/50">
-            <div className="flex justify-center mb-8">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-violet-500 to-purple-500 flex items-center justify-center shadow-xl">
-                <Users className="w-10 h-10 text-white" />
-              </div>
-            </div>
-            
-            <h2 className="text-4xl font-black mb-8 bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">
-              Referenti
-            </h2>
-            
-            <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-              <div className="backdrop-blur-xl bg-white/80 rounded-2xl p-8 border border-violet-200 hover:border-violet-400 hover:bg-white hover:shadow-xl transition-all duration-300">
-                <p className="text-2xl font-bold text-gray-900">Martina Andrea Viecelli</p>
-              </div>
-              <div className="backdrop-blur-xl bg-white/80 rounded-2xl p-8 border border-purple-200 hover:border-purple-400 hover:bg-white hover:shadow-xl transition-all duration-300">
-                <p className="text-2xl font-bold text-gray-900">Margherita Zuecco</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-        </div>
+      </div>
     );
 };
 

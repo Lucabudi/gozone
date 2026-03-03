@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Image } from 'lucide-react';
 import { Button } from '../Ui/Button';
 
 // Componente DropDownMenu
@@ -56,14 +56,14 @@ const DropDownMenu = ({ scrolled, isMobile = false, onItemClick } : { scrolled: 
             >
               Circular Zone
             </a>
-            <a 
+            {/* <a 
               href="/cosa-facciamo/progetti" 
               className={`block py-2 text-sm transition-colors duration-500 ${
                 scrolled ? "text-gray-600 hover:text-black" : "text-gray-300 hover:text-white"
               }`}
             >
               I nostri Progetti
-            </a>
+            </a> */}
           </div>
         )}
       </div>
@@ -105,9 +105,9 @@ const DropDownMenu = ({ scrolled, isMobile = false, onItemClick } : { scrolled: 
           <a href="/cosa-facciamo/circular-zone" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
             Circular Zone
           </a>
-          <a href="/cosa-facciamo/progetti" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+          {/* <a href="/cosa-facciamo/progetti" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
             I nostri Progetti
-          </a>
+          </a> */}
         </div>
       )}
     </div>
@@ -145,18 +145,18 @@ export default function Navbar() {
             : "bg-transparent border-b-0"
         }`}
       >
-        <div className="max-w-8xl mx-auto px-6 sm:px-6 lg:px-10 w-full">
+        <div className="max-w-8xl mx-auto px-6 py-2 sm:px-6 lg:px-10 w-full">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <a
               href="/"
-              className={`text-2xl font-bold transition-colors duration-500 ${
+              className={`min-w-[150px] text-2xl font-bold transition-colors duration-500 ${
                 scrolled ? "text-gray-900" : "text-white"
               } `}
             >
-              MyWebsite
+              {!scrolled && <img src="/gozone_logosimbolo.svg" alt="Logo" width={50} height={100} className="inline-block mr-2 fill-white text-white ml-8" />}
+              {scrolled && <img src="/gozone_logocompleto.svg" alt="Logo" width={150}  height={100} className="inline-block mr-2 fill-white text-white" />}
             </a>
-
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8 items-center">
               <a
@@ -229,7 +229,7 @@ export default function Navbar() {
             </div>
 
             <div className="hidden md:flex space-x-2 text-white">
-              <Button onClick={() => {}} text="Volontari" variant='outline' scrolled />
+              {/* <Button onClick={() => {}} text="Volontari" variant='outline' scrolled /> */}
               <Button onClick={() => {}} text="Sostienici" scrolled />
             </div>
             {/* Mobile Menu Button */}
@@ -321,12 +321,12 @@ export default function Navbar() {
               Contatti
             </a>
             <div className="pt-4 space-y-2 border-t border-gray-200/20">
-              <button 
+              {/* <button 
                 className="w-full px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition-colors font-bold"
                 onClick={closeMenu}
               >
                 Volontari
-              </button>
+              </button> */}
               <button 
                 className="w-full px-4 py-2 rounded bg-gray-200 text-gray-800 hover:bg-gray-300 transition-colors font-bold"
                 onClick={closeMenu}
