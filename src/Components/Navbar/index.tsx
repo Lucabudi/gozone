@@ -11,13 +11,7 @@ const DropDownMenu = ({ scrolled, isMobile = false, onItemClick } : { scrolled: 
       <div className="w-full">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`w-full flex items-center justify-between py-2 font-bold transition-colors duration-500 ${
-            window.location.pathname === '/risorse'
-              ? 'text-black'
-              : scrolled
-                ? 'text-gray-700'
-                : 'text-white'
-          }`}
+          className="w-full flex items-center justify-between py-2 font-bold text-gray-800 hover:text-black transition-colors duration-300"
         >
           Cosa facciamo?
           <ChevronDown size={16} className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
@@ -26,33 +20,29 @@ const DropDownMenu = ({ scrolled, isMobile = false, onItemClick } : { scrolled: 
           <div className="pl-4 space-y-1 mt-1">
             <a 
               href="/cosa-facciamo/geo-zone" 
-              className={`block py-2 text-sm transition-colors duration-500 ${
-                scrolled ? "text-gray-600 hover:text-black" : "text-gray-300 hover:text-white"
-              }`}
+              className="block py-2 text-sm text-gray-600 hover:text-black transition-colors duration-300"
+              onClick={onItemClick}
             >
               Geo Zone  
             </a>
             <a 
               href="/cosa-facciamo/psy-zone" 
-              className={`block py-2 text-sm transition-colors duration-500 ${
-                scrolled ? "text-gray-600 hover:text-black" : "text-gray-300 hover:text-white"
-              }`}
-              >
+              className="block py-2 text-sm text-gray-600 hover:text-black transition-colors duration-300"
+              onClick={onItemClick}
+            >
               Psy Zone
             </a>
             <a 
               href="/cosa-facciamo/anthropological-zone" 
-              className={`block py-2 text-sm transition-colors duration-500 ${
-                scrolled ? "text-gray-600 hover:text-black" : "text-gray-300 hover:text-white"
-              }`}
-              >
+              className="block py-2 text-sm text-gray-600 hover:text-black transition-colors duration-300"
+              onClick={onItemClick}
+            >
               Anthropologic Zone
             </a>
             <a 
               href="/cosa-facciamo/circular-zone" 
-              className={`block py-2 text-sm transition-colors duration-500 ${
-                scrolled ? "text-gray-600 hover:text-black" : "text-gray-300 hover:text-white"
-              }`}
+              className="block py-2 text-sm text-gray-600 hover:text-black transition-colors duration-300"
+              onClick={onItemClick}
             >
               Circular Zone
             </a>
@@ -247,22 +237,14 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ${
+          className={`md:hidden overflow-hidden transition-all duration-300 bg-white border-t border-gray-200 ${
             isOpen ? "max-h-screen" : "max-h-0"
-          } ${
-            scrolled ? "bg-white border-t border-gray-200" : "bg-gray-900/95 backdrop-blur-md"
           }`}
         >
           <div className="px-6 py-4 space-y-1">
             <a
               href="/chi-siamo"
-              className={`block py-2 font-bold transition-colors duration-500 ${
-                currentPath === '/risorse'
-                  ? 'text-black'
-                  : scrolled
-                    ? 'text-gray-700 hover:text-black'
-                    : 'text-white hover:text-gray-300'
-              } ${currentPath === '/chi-siamo' ? 'underline' : ''}`}
+              className={`block py-2 font-bold text-gray-800 hover:text-black transition-colors duration-300 ${currentPath === '/chi-siamo' ? 'underline' : ''}`}
               onClick={closeMenu}
             >
               Chi siamo
@@ -270,13 +252,7 @@ export default function Navbar() {
             <DropDownMenu scrolled={scrolled} isMobile={true} onItemClick={closeMenu} />
             <a
               href="/sportello-psicologico"
-              className={`block py-2 font-bold transition-colors duration-500 ${
-                currentPath === '/risorse'
-                  ? 'text-black'
-                  : scrolled
-                    ? 'text-gray-700 hover:text-black'
-                    : 'text-white hover:text-gray-300'
-              } ${currentPath === '/sportello-psicologico' ? 'underline' : ''}`}
+              className={`block py-2 font-bold text-gray-800 hover:text-black transition-colors duration-300 ${currentPath === '/sportello-psicologico' ? 'underline' : ''}`}
               onClick={closeMenu}
             >
               Sportello psicologico
@@ -307,7 +283,7 @@ export default function Navbar() {
             >
               Risorse in biblioteca
             </a> */}
-            <a
+            {/* <a
               href="#contatti"
               className={`block py-2 font-bold transition-colors duration-500 ${
                 currentPath === '/risorse'
@@ -319,8 +295,8 @@ export default function Navbar() {
               onClick={closeMenu}
             >
               Contatti
-            </a>
-            <div className="pt-4 space-y-2 border-t border-gray-200/20">
+            </a> */}
+            <div className="pt-4 space-y-2 border-t border-gray-200">
               {/* <button 
                 className="w-full px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition-colors font-bold"
                 onClick={closeMenu}
@@ -328,7 +304,7 @@ export default function Navbar() {
                 Volontari
               </button> */}
               <button 
-                className="w-full px-4 py-2 rounded bg-gray-200 text-gray-800 hover:bg-gray-300 transition-colors font-bold"
+                className="w-full px-4 py-2 rounded-lg bg-gray-800 text-white hover:bg-black transition-colors duration-300 font-bold"
                 onClick={closeMenu}
               >
                 Sostienici
