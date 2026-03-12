@@ -32,7 +32,7 @@ export const Aree = () => {
             <a href={item.link} key={i}>
             <div key={i} className="flex flex-col items-center">
               {/* Square image */}
-              <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+              <div className="relative w-full overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.title}

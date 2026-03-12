@@ -93,21 +93,16 @@ const HomePage = () => {
                 {/* Background blobs */}
                 <div style={{ position: "absolute", top: "10%", right: "-5%", width: 520, height: 520, borderRadius: "50%", background: "radial-gradient(circle, rgba(134,239,172,0.35) 0%, transparent 70%)", animation: "pulse-ring 6s ease-in-out infinite" }} />
                 <div style={{ position: "absolute", bottom: "5%", left: "-8%", width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle, rgba(147,197,253,0.25) 0%, transparent 70%)", animation: "pulse-ring 8s ease-in-out 2s infinite" }} />
-                <div style={{ maxWidth: 900, textAlign: "center", position: "relative", zIndex: 2 }}>
+                <div style={{ textAlign: "center", position: "relative", zIndex: 2 }}>
                     <img src='/gozone_logocompleto.svg' alt='Logo' width={350} height={100} className='inline-block mr-2 fill-white text-white mb-10' />
-                    <FadeSlide>
-                        <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(240,253,244,0.9)", border: "1px solid #86efac", borderRadius: 999, padding: "8px 20px", marginBottom: 28, fontSize: 12, fontWeight: 700, color: "#166534", letterSpacing: "0.1em" }}>
-                            <span>🌍</span> BENVENUTI
-                        </div>
-                    </FadeSlide>
                     <FadeSlide delay={0.1}>
                         <h1 style={{ fontSize: "clamp(32px, 6vw, 56px)", fontWeight: 700, lineHeight: 1.2, margin: "0 0 32px", color: "#14532d" }}>
-                            Associazione di Promozione Sociale
+                            Goldilocks Zone <br /> Association for Health and Social Climate Actions
                         </h1>
                     </FadeSlide>
                     <FadeSlide delay={0.2}>
                         <p style={{ fontSize: "clamp(16px, 2vw, 20px)", fontWeight: 400, color: "#4b7c5a", maxWidth: 820, margin: "0 auto", lineHeight: 1.8 }}>
-                            L'associazione Go-Zone nasce come <strong style={{ color: "#166534" }}>Associazione di Promozione Sociale</strong> volta a promuovere esperienze di <strong style={{ color: "#166534" }}>cittadinanza attiva</strong> nel campo del Climate Change, attraverso strategie ed azioni di cura delle persone, della comunità e progetti di sostenibilità sociale ed ambientale.
+                            Go-Zone è  un'<strong style={{ color: "#166534" }}>associazione di Promozione Sociale</strong> volta a promuovere esperienze di <strong style={{ color: "#166534" }}>cittadinanza attiva</strong> nel campo del Climate Change, attraverso strategie ed azioni di cura delle persone, della comunità e progetti di sostenibilità sociale ed ambientale.
                         </p>
                     </FadeSlide>
                 </div>
@@ -123,7 +118,7 @@ const HomePage = () => {
                                 Esplora le nostre Zone
                             </h2>
                             <p style={{ fontSize: 18, color: "#6b7280", maxWidth: 680, margin: "0 auto 48px" }}>
-                                Ogni zona rappresenta un ambito di intervento specifico per costruire comunità più resilienti e consapevoli
+                                Ogni zona rappresenta un’area di intervento per sviluppare comunità e legami
                             </p>
                         </div>
                     </FadeSlide>
@@ -144,13 +139,12 @@ const HomePage = () => {
                 <div style={{ maxWidth: 1200, margin: "0 auto" }}>
                     <FadeSlide>
                         <div style={{ textAlign: "center", marginBottom: 56 }}>
-                            <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.2em", color: "#16a34a", textTransform: "uppercase", marginBottom: 12 }}>Rimani aggiornato</p>
+                            <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.2em", color: "#16a34a", textTransform: "uppercase", marginBottom: 12 }}>Rimani sul pezzo</p>
                             <h2 style={{ fontSize: "clamp(28px, 4vw, 48px)", fontWeight: 700, color: "#14532d", margin: "0 0 16px" }}>
                                 Storie di Clima
                             </h2>
                         </div>
                     </FadeSlide>
-                    
                     <FadeSlide delay={0.2}>
                         <ClimateStories title="" array={stories} />
                     </FadeSlide>
