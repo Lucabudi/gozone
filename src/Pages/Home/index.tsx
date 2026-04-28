@@ -86,7 +86,7 @@ const HomePage = () => {
     
     return (
         <div className="home-page full-width">
-            <HeroSection text="Il clima, la nostra casa" height="90vh" />
+            <HeroSection text="Il clima, la nostra casa." height="90vh" />
             
             {/* INTRO SECTION */}
             <section style={{ display: "flex", alignItems: "center", justifyContent: "center", position: "relative", padding: "60px 40px", overflow: "hidden" }}>
@@ -113,7 +113,6 @@ const HomePage = () => {
                 <div style={{ maxWidth: 1200, margin: "0 auto" }}>
                     <FadeSlide>
                         <div style={{ textAlign: "center", marginBottom: 56 }}>
-                            <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.2em", color: "#16a34a", textTransform: "uppercase", marginBottom: 12 }}>Le nostre aree</p>
                             <h2 style={{ fontSize: "clamp(28px, 4vw, 48px)", fontWeight: 700, color: "#14532d", margin: "0 0 16px" }}>
                                 Esplora le nostre Zone
                             </h2>

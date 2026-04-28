@@ -12,7 +12,7 @@ export const HeroSection = ({ text, height = "100vh", animation = true, backgrou
         const timeout = setTimeout(() => {
           setDisplayedText((prev) => prev + text[index]);
           setIndex(index + 1);
-        }, 200); // typing speed (ms)
+        }, 100); // typing speed (ms)
         return () => clearTimeout(timeout);
       } else {
         setDisplayedText(text);
@@ -20,7 +20,7 @@ export const HeroSection = ({ text, height = "100vh", animation = true, backgrou
     }, [index]);
 
     return (
-      <h1 className="text-6xl md:text-[120px] font-bold mb-4 text-center whitespace-pre-line">
+      <h1 className="text-6xl md:text-[80px] font-bold mb-4 text-center whitespace-pre-line">
         {displayedText}
       </h1>
     );

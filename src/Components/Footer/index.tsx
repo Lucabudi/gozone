@@ -9,7 +9,7 @@ export default function Footer() {
           <h3 className="text-lg font-semibold text-gray-900">Contatti</h3>
           <ul className="text-gray-700 space-y-1">
             <li>Via Cavazzana, 5, 35123 Padova PD</li>
-            <a href="mailto:info@go-zone.it">info@go-zone.it</a>
+            <a href="mailto:info@gozone.it">Info generali e amministrazione : info@gozone.it</a>
             <li>P. IVA</li>
           </ul>
 

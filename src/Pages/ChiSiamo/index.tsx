@@ -131,7 +131,7 @@ const ChiSiamo: React.FC = () => {
 
     return (
         <div className="home-page full-width"> 
-            <HeroSection text="Chi Siamo" height="60vh" animation={false} />
+            <HeroSection text="" height="60vh" animation={false} />
       {/* HERO */}
       <section style={{ display: "flex", alignItems: "center", justifyContent: "center", position: "relative", padding: "20px 40px 60px", overflow: "hidden" }}>
         {/* bg blobs */}
@@ -140,36 +140,29 @@ const ChiSiamo: React.FC = () => {
         <div style={{ position: "absolute", top: "30%", left: "8%", width: 200, height: 200, borderRadius: "50%", background: "radial-gradient(circle, rgba(253,224,71,0.2) 0%, transparent 70%)" }} />
 
         <div style={{ maxWidth: 900, textAlign: "center", position: "relative", zIndex: 2 }}>
-          <FadeSlide>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(240,253,244,0.9)", border: "1px solid #86efac", borderRadius: 999, padding: "8px 20px", marginBottom: 28, fontSize: 12, fontWeight: 700, color: "#166534", letterSpacing: "0.1em" }}>
-              <span>🌍</span> FONDATA IL 16 MAGGIO 2025
-            </div>
-          </FadeSlide>
-
           <FadeSlide delay={0.1}>
             <h1 style={{ fontSize: "clamp(52px, 9vw, 100px)", fontWeight: 700, lineHeight: 1.05, margin: "0 0 24px", color: "#14532d" }}>
-              Go-Zone  <br />
               <em style={{ color: "#16a34a", fontStyle: "italic" }}>Goldilocks Zone</em>
             </h1>
           </FadeSlide>
 
           <FadeSlide delay={0.2}>
             <p style={{ fontSize: "clamp(16px, 2vw, 22px)", fontWeight: 400, color: "#4b7c5a", maxWidth: 680, margin: "0 auto 40px", lineHeight: 1.7 }}>
-              Association for Social and Health Climate Actions — nata per creare contesti <strong style={{ color: "#166534" }}>abitabili, consapevoli e sostenibili</strong> nelle nostre città, comunità e vite.
+              Association for Social and Health Climate Actions — nata per ideare <strong style={{ color: "#166534" }}>contesti abitabili, consapevoli e sostenibili</strong> nelle nostre città, comunità e vite.
             </p>
           </FadeSlide>
 
           <FadeSlide delay={0.4}>
             <p style={{ fontSize: "clamp(16px, 2vw, 22px)", fontWeight: 400, color: "#4b7c5a", maxWidth: 680, margin: "0 auto 40px", lineHeight: 1.7 }}>
-                l'associazione nasce in un periodo storico tutt'altro che casuale, infatti in quel periodo si misurava:
+                il 16 maggio 2025 nasce Go-Zone. In quel mese Mauna Loa registra un nuovo record:
             </p>
           </FadeSlide>
         </div>
       </section>
 
       {/* CO2 STATS SECTION */}
-      <section style={{ padding: "20px 40px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+      <section style={{ padding: "0px 40px" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div className="glass" style={{ borderRadius: 32, padding: "56px 64px", boxShadow: "0 8px 48px rgba(0,0,0,0.06)" }}>
             <div className="grid md:grid-cols-2 gap-8 items-center">              
              <FadeSlide>
@@ -187,14 +180,13 @@ const ChiSiamo: React.FC = () => {
                     CO₂ in atmosfera — record storico
                   </p>
                   <p style={{ fontSize: 13, color: "#6b7280", marginBottom: 24 }}>Osservatorio di Mauna Loa — Maggio 2025</p>
-                  
                 </div>
               </FadeSlide>
 
               <FadeSlide delay={0.15}>
                 <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
                   <p style={{ fontSize: 17, color: "#374151", lineHeight: 1.7 }}>
-                    Il valore più alto degli ultimi <strong>800.000 anni</strong>. Una soglia simbolica e concreta che ci richiama all'urgenza di ripensare il nostro rapporto con il pianeta.
+                    Il valore più alto degli ultimi <strong>800.000 anni</strong>. Una soglia che ci richiama all’urgenza di ripensare il nostro rapporto con il pianeta.
                   </p>
                 </div>
               </FadeSlide>
@@ -204,7 +196,7 @@ const ChiSiamo: React.FC = () => {
       </section>
 
       {/* NAME ORIGIN — BENTO */}
-      <section className='flex justify-center' style={{ padding: "20px 40px" }}>
+      <section className='flex justify-center' style={{ padding: "20px 40px", marginTop: 30 }}>
         <div>
           <FadeSlide>
             <div style={{ textAlign: "center", marginBottom: 48 }}>
@@ -228,10 +220,9 @@ const ChiSiamo: React.FC = () => {
             <FadeSlide delay={0.1} className='h-full'>
               <div className="card-hover h-full" style={{ borderRadius: 28, padding: 40, background: "linear-gradient(135deg, rgb(30, 58, 95), rgb(30 143 175 / 99%))", color: "white", boxShadow: "0 4px 32px rgba(30,64,175,0.25)" }}>
                 <div style={{ fontSize: 38, marginBottom: 16 }}>🚀</div>
-                <h3 style={{ fontSize: 20, fontWeight: 700, marginBottom: 12 }}>La NASA lo ha adottato</h3>
+                <h3 style={{ fontSize: 20, fontWeight: 700, marginBottom: 12 }}>La NASA</h3>
                 <p style={{ fontSize: 14, lineHeight: 1.75, opacity: 0.85 }}>
-                 ed ha preso in prestito il concetto per descrivere la cosiddetta Goldilocks Zone in astronomia: la fascia attorno a una stella in cui le condizioni sono ottimali per la presenza di acqua liquida sulla superficie di un pianeta. Non troppo vicino, dove l’acqua evaporerebbe; non troppo lontano, dove congelerebbe. Una regione “giusta al punto giusto”, ritenuta fondamentale per la possibilità che la vita possa nascere e mantenersi.
-                 È la zona in cui un pianeta può essere — proprio come nella fiaba — abitabile.
+                 ha adottato il concetto per descrivere la cosiddetta Goldilocks Zone in astronomia: la fascia attorno a una stella in cui le condizioni sono ottimali per la presenza di acqua liquida sulla superficie di un pianeta. Non troppo vicino, dove l’acqua evaporerebbe; non troppo lontano, dove congelerebbe. Una regione “giusta al punto giusto”, ritenuta fondamentale per la possibilità che la vita possa nascere e mantenersi. È la zona in cui un pianeta può essere — proprio come nella fiaba — abitabile.
                 </p>    
               </div>
             </FadeSlide>
@@ -248,10 +239,10 @@ const ChiSiamo: React.FC = () => {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <FadeSlide>
             <div style={{ textAlign: "center", marginBottom: 56 }}>
-              <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.2em", color: "#16a34a", textTransform: "uppercase", marginBottom: 12 }}>Come agiamo</p>
+              <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.2em", color: "#16a34a", textTransform: "uppercase", marginBottom: 12 }}>IN PRATICA</p>
               <h2 style={{ fontSize: "clamp(28px, 4vw, 48px)", fontWeight: 700, color: "#14532d", margin: "0 0 16px" }}>Le nostre azioni</h2>
               <p style={{ fontSize: 18, color: "#6b7280", maxWidth: 580, margin: "0 auto" }}>
-                Attraverso ricerca, divulgazione scientifica e azioni concrete, rafforziamo comunità più consapevoli e resilienti.
+                Ricerca, divulgazione scientifica, supporto psicologico e progettazione sociale
               </p>
             </div>
           </FadeSlide>
