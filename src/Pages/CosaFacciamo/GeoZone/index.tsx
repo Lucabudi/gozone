@@ -65,24 +65,23 @@ const GeoZone: React.FC = () => {
           </div> */}
           
           <h2 className="text-3xl font-bold text-gray-700 max-w-3xl mx-auto  leading-relaxed ">
-            L'area dedicata allo studio e alla comunicazione delle trasformazioni geografiche e fisiche del clima.
+            Leggere il cambiamento, abitare la complessità.
           </h2>
         </div>
       </section>
 
       {/* Stats Section with Glass Morphism */}
       <section className="relative z-10 px-6 py-20">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto text-center">
           <div className="backdrop-blur-xl bg-white/80 rounded-3xl p-12 border border-white/40 shadow-2xl shadow-blue-200/50">
-            <div className="grid lg:grid-cols-2 gap-16">
+            <div className="">
               <div className="space-y-8">
                 <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-red-100 to-orange-100 rounded-full border border-red-300">
                   <Thermometer className="w-6 h-6 text-red-600" />
                   <span className="text-sm font-semibold text-red-700">EMERGENZA CLIMATICA</span>
                 </div>
-                
                 <div>
-                  <div className="flex items-baseline gap-4 mb-4">
+                  <div className="flex items-baseline gap-4 mb-4 justify-center align-center">
                     <span className="text-7xl font-black bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
                       20
                     </span>
@@ -96,13 +95,12 @@ const GeoZone: React.FC = () => {
                   </p>
                   <p className="text-sm text-gray-600 mt-2">1990 → 2024</p>
                 </div>
-
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Negli ultimi trent'anni le emissioni globali sono quasi raddoppiate. L'aumento dei gas serra sta alterando l'equilibrio energetico del pianeta e rendendo il clima instabile.
+                  Negli ultimi trent'anni le <strong>emissioni globali</strong> sono quasi raddoppiate: dai 20 miliardi di tonnellate del 1990 siamo arrivati agli attuali <strong>37 miliardi</strong>. L’aumento dei <strong>gas serra</strong>, principale <strong>forcing climatico</strong>, sta alterando l’equilibrio energetico del pianeta e rendendo il clima <strong>instabile</strong>, con effetti noti e altri ancora difficili da prevedere: dalle deviazioni delle correnti oceaniche alle trasformazioni dei paesaggi, dalla perdita di biodiversità alla scomparsa di interi ecosistemi.
                 </p>
               </div>
 
-              <div className="space-y-4">
+              {/* <div className="space-y-4">
                 <h3 className="text-2xl font-bold text-gray-900 mb-8">Alcuni effetti del cambiamento:</h3>
                 {[
                   "Deviazioni delle correnti oceaniche",
@@ -118,10 +116,14 @@ const GeoZone: React.FC = () => {
                     <span className="text-gray-700 group-hover:text-gray-900 transition-colors font-medium">{effect}</span>
                   </div>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="relative z-10 px-6 py-20 justify-center flex">
+        <iframe height={'800px'} width={'90%'} src="https://tulpinteractive.com/goldilocks/" title="TULP interactive - Goldilocks"></iframe>
       </section>
 
       {/* Vision Section - Bento Style */}
@@ -132,10 +134,10 @@ const GeoZone: React.FC = () => {
             <div className="mb-12">
               <h3 className="text-3xl font-bold mb-6 text-cyan-700 uppercase">Guardare in Faccia alla Realtà</h3>
               <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                Non significa arrendersi. <br />Al contrario, significa riconoscere che esiste ancora un ampio <b>margine di azione</b>. La sfida non è evitare il cambiamento, ma governarlo con intelligenza, orientando le nostre società verso modi di abitare la Terra più <b>giusti, adattivi e consapevoli dei limiti biofisici.</b>
+                Non significa arrendersi. <br />Al contrario, significa riconoscere che esiste ancora un ampio <b>margine di azione</b>. La sfida non è <strong>evitare </strong>il cambiamento, ma governarlo con intelligenza, orientando le nostre società verso modi di abitare la Terra più <b>giusti, adattivi e consapevoli dei limiti biofisici.</b>
               </p>
-              <p className="text-xl text-gray-700 leading-relaxed font-semibold">
-                Possiamo — e dobbiamo — scegliere come vivere questa transizione: investendo in conoscenza, immaginazione politica, responsabilità collettiva e partecipazione comunitaria.
+              <p className="text-xl text-gray-700 leading-relaxed">
+                Possiamo — e dobbiamo — scegliere come vivere questa transizione: investendo in <strong>conoscenza</strong>, <strong>immaginazione politica</strong>, <strong>responsabilità collettiva</strong> e <strong>partecipazione comunitaria</strong>.
               </p>
             </div>
               <h5 className="text-3xl font-black mb-6 bg-gradient-to-r from-cyan-600 to-emerald-600 bg-clip-text text-transparent">
@@ -151,7 +153,6 @@ const GeoZone: React.FC = () => {
                 Come <b>scienza delle relazioni</b> tra luoghi, processi ambientali e comportamenti collettivi
               </p>
             </div>
-
             <div className="backdrop-blur-xl bg-gradient-to-br from-blue-100/80 to-violet-100/80 rounded-3xl p-10 border border-blue-200 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-200/50 transition-all duration-300 group">
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-violet-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
                 <Waves className="w-8 h-8 text-white" />
@@ -169,6 +170,7 @@ const GeoZone: React.FC = () => {
       <section className="relative z-10 px-6 py-12">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
+              <p className="text-3xl font-bold mb-6">GEO ZONE è l’area dell’associazione dedicata allo studio del cambiamento climatico e dell’attuale crisi in corso, alla comunicazione e divulgazione delle scienze del Sistema Terra, del clima, della geografia, dei territori, della pianificazione ambientale e sociale, dei biomi e degli ecosistemi.</p>
               <span className="text-xl font-semibold text-gray-700">Attraverso ricerca, formazione, divulgazione e progetti territoriali, ci impegniamo a:</span>
           </div>
 

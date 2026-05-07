@@ -12,9 +12,9 @@ export const Aree = () => {
       link: "/cosa-facciamo/psy-zone",
     },
     {
-      title: "ANTHROPOLOGIC ZONE",
+      title: "ANTHRO ZONE",
       image: "/antrohome.png",
-      link: "/cosa-facciamo/anthropological-zone",
+      link: "/cosa-facciamo/anthro-zone",
     },
     {
       title: "CIRCULAR ZONE",
@@ -27,10 +27,10 @@ export const Aree = () => {
     <section className="w-full py-16">
       <div className="max-w-6xl mx-auto px-4">
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 transition-shadow duration-300">
           {items.map((item, i) => (
             <a href={item.link} key={i}>
-            <div key={i} className="flex flex-col items-center">
+            <div key={i} className="flex flex-col items-center hover:scale-125 transition-transform duration-300">
               {/* Square image */}
               <div className="relative w-full overflow-hidden">
                 <img
@@ -41,7 +41,7 @@ export const Aree = () => {
               </div>
 
               {/* Title below */}
-              <h3 className="mt-4 text-xl  text-gray-800 text-center">
+              <h3 className="mt-4 text-xl  text-[#2e6750] font-bold text-center">
                 {item.title}
               </h3>
             </div>

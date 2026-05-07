@@ -229,7 +229,8 @@ const ChiSiamo: React.FC = () => {
           </div>
           <FadeSlide delay={0.2} className='mt-6 flex justify-center'>
             <p style={{ fontSize: "clamp(16px, 2vw, 22px)", textAlign: "center", padding: "40px", fontWeight: 400, color: "#4b7c5a", maxWidth: 880, margin: "20 auto 40px", lineHeight: 1.7 }}>
-                Per noi è il nome perfetto in quanto desideriamo costruire spazi in cui persone e comunità possano vivere in equilibrio con l’ambiente, affrontando le sfide del cambiamento climatico senza perdere di vista la <strong>cura reciproca</strong> e il <strong>benessere collettivo</strong>.</p>
+                La scelta di questo nome ci ricorda chi siamo, i nostri valori e ci ispira ogni giorno a riflettere ed affrontare le sfide del cambiamento climatico attraverso la <strong>cura reciproca</strong> e il <strong>legame con la terra</strong>.
+            </p>
          </FadeSlide>
         </div>
       </section>

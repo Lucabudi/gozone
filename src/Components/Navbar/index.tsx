@@ -23,6 +23,12 @@ const DropDownMenu = ({ scrolled, isMobile = false, onItemClick } : { scrolled: 
               className="block py-2 text-sm text-gray-600 hover:text-black transition-colors duration-300"
               onClick={onItemClick}
             >
+              <img
+                  width={'44px'}
+                  src={"/geohome.png"}
+                  alt="Geo Zone"
+                  className="object-cover object-center"
+              />
               Geo Zone  
             </a>
             <a 
@@ -30,20 +36,38 @@ const DropDownMenu = ({ scrolled, isMobile = false, onItemClick } : { scrolled: 
               className="block py-2 text-sm text-gray-600 hover:text-black transition-colors duration-300"
               onClick={onItemClick}
             >
+              <img
+                  width={'44px'}
+                  src={"/psyhome.png"}
+                  alt="Psy Zone"
+                  className="object-cover object-center"
+              />
               Psy Zone
             </a>
             <a 
-              href="/cosa-facciamo/anthropological-zone" 
+              href="/cosa-facciamo/anthro-zone" 
               className="block py-2 text-sm text-gray-600 hover:text-black transition-colors duration-300"
               onClick={onItemClick}
             >
-              Anthropologic Zone
+              <img
+                  width={'44px'}
+                  src={"/antrohome.png"}
+                  alt="Anthro Zone"
+                  className="object-cover object-center"
+              />
+              Anthro Zone
             </a>
             <a 
               href="/cosa-facciamo/circular-zone" 
               className="block py-2 text-sm text-gray-600 hover:text-black transition-colors duration-300"
               onClick={onItemClick}
             >
+              <img
+                  width={'44px'}
+                  src={"/economichome.png"}
+                  alt="Circular Zone"
+                  className="object-cover object-center"
+              />
               Circular Zone
             </a>
             {/* <a 
@@ -83,16 +107,40 @@ const DropDownMenu = ({ scrolled, isMobile = false, onItemClick } : { scrolled: 
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
         >
-          <a href="/cosa-facciamo/geo-zone" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-            Geo Zone  
+          <a href="/cosa-facciamo/geo-zone" className="flex flex-row items-center block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+            <img
+                width={'44px'}
+                src={"/geohome.png"}
+                alt="Geo Zone"
+                className="object-cover object-center"
+            />
+            <p>Geo Zone</p>
           </a>
-          <a href="/cosa-facciamo/psy-zone" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+          <a href="/cosa-facciamo/psy-zone" className="flex flex-row items-center block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+            <img
+                src={"/psyhome.png"}
+                alt="Psy Zone"
+                width={'44px'}
+                className="object-cover object-center"
+            />
             Psy Zone
           </a>
-          <a href="/cosa-facciamo/anthropological-zone" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-            Anthropologic Zone
+          <a href="/cosa-facciamo/anthro-zone" className="flex flex-row items-center block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+            <img
+                src={"/antrohome.png"}
+                alt="Anthro Zone"
+                width={'44px'}
+                className="object-cover object-center"
+            />
+            Anthro Zone
           </a>
-          <a href="/cosa-facciamo/circular-zone" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+          <a href="/cosa-facciamo/circular-zone" className="flex flex-row items-center block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+            <img
+                src={"/economichome.png"}
+                alt="Circular Zone"
+                width={'44px'}
+                className="object-cover object-center"
+            />
             Circular Zone
           </a>
           {/* <a href="/cosa-facciamo/progetti" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
