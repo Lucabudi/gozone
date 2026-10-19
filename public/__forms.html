@@ -1,0 +1,25 @@
+<!doctype html>
+<!--
+  Copia statica del form React (src/Components/SportelloForm).
+  Netlify la legge al deploy per registrare il form "sportello":
+  i campi devono avere gli stessi name del componente.
+-->
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form name="sportello" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="sportello" />
+      <input name="bot-field" />
+      <input name="nome" />
+      <input name="cognome" />
+      <input name="telefono" />
+      <input name="email" />
+      <textarea name="messaggio"></textarea>
+      <input type="checkbox" name="privacy" />
+    </form>
+  </body>
+</html>

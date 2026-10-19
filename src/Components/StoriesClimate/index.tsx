@@ -1,57 +1,40 @@
-import { ArrowRight } from "lucide-react";
-import { Button } from "../Ui/Button";
+import { ArrowRight } from 'lucide-react';
+import type { Story } from '../../data/stories';
+import { Button } from '../Ui';
 
-export default function ClimateStories({ title, array }: { title: string, array: any[] }) {
-  
-
+export default function ClimateStories({ stories, ctaTo }: { stories: Story[]; ctaTo?: string }) {
   return (
-    <section className="w-full py-20">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Title */}
-        <h2 className="text-4xl font-bold text-center mb-12">{title}</h2>
-
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {array.map((story, i) => (
-            <div
-              key={i}
-              className="relative rounded-xl overflow-hidden shadow-md hover:shadow-lg transition min-h-[300px]"
-            >
-            {/* Background image */}
+    <>
+      <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {stories.map((story, i) => (
+          <li key={i} className="group relative aspect-[4/3] overflow-hidden rounded-2xl shadow-sm sm:aspect-[3/4]">
             <img
-                src={story.image}
-                alt={story.title}
-                className="object-cover object-center opacity-90"
+              src={story.image}
+              alt=""
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
-
-            {/* Dark overlay */}
-              <div className="absolute inset-0 bg-black/70" />
-
-              {/* Content overlay */}
-              <div className="absolute inset-0 flex flex-col justify-end p-4 text-white">
-                <p className="text-sm mb-1 opacity-90">{story.date}</p>
-                <h3 className="text-lg font-semibold mb-4">{story.title}</h3>
-
-                <a
-                  href="#"
-                  className="inline-flex items-center text-sm font-medium gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm px-3 py-1.5 rounded-md transition"
-                >
-                  <ArrowRight className="w-4 h-4" />
-                  {story.linkText}
-                </a>
-              </div>
+            <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
+            <div className="absolute inset-0 flex flex-col justify-end p-5 text-white">
+              <p className="text-xs font-semibold tracking-wider text-white/75 uppercase">{story.date}</p>
+              {story.title && <h3 className="mt-1 text-lg leading-snug font-semibold">{story.title}</h3>}
+              <a
+                href={story.href ?? '#'}
+                className="mt-4 inline-flex w-fit items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-sm font-medium backdrop-blur-sm transition hover:bg-white/25"
+              >
+                {story.linkText}
+                <ArrowRight className="h-4 w-4" />
+              </a>
             </div>
-          ))}
-        </div>
+          </li>
+        ))}
+      </ul>
 
-        {/* Bottom button */}
-        <div className="text-center mt-12">
-          <Button
-            text="SCOPRI TUTTE LE STORIE"
-            onClick={() => window.location.href = "/storie-di-clima"}
-          />
+      {ctaTo && (
+        <div className="mt-10 text-center md:mt-12">
+          <Button to={ctaTo}>Scopri tutte le storie</Button>
         </div>
-      </div>
-    </section>
+      )}
+    </>
   );
 }
