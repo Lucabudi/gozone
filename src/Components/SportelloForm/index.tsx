@@ -12,11 +12,23 @@ type Status = 'idle' | 'sending' | 'success' | 'error';
 const inputClass =
   'w-full rounded-xl border border-line bg-white px-4 py-3 text-base text-ink placeholder:text-muted/70 transition focus:border-accent focus:ring-2 focus:ring-accent/20 focus:outline-none';
 
-function Field({ label, htmlFor, children, className }: { label: string; htmlFor: string; children: ReactNode; className?: string }) {
+function Field({
+  label,
+  htmlFor,
+  required = true,
+  children,
+  className,
+}: {
+  label: string;
+  htmlFor: string;
+  required?: boolean;
+  children: ReactNode;
+  className?: string;
+}) {
   return (
     <div className={className}>
       <label htmlFor={htmlFor} className="mb-2 block text-sm font-semibold text-ink">
-        {label} <span className="text-accent">*</span>
+        {label} {required ? <span className="text-accent">*</span> : <span className="font-normal text-muted">(facoltativo)</span>}
       </label>
       {children}
     </div>
@@ -74,12 +86,11 @@ export default function SportelloForm() {
       <Field label="Cognome" htmlFor="sf-cognome">
         <input id="sf-cognome" name="cognome" required autoComplete="family-name" className={inputClass} />
       </Field>
-      <Field label="Numero di telefono" htmlFor="sf-telefono">
+      <Field label="Numero di telefono" htmlFor="sf-telefono" required={false}>
         <input
           id="sf-telefono"
           name="telefono"
           type="tel"
-          required
           autoComplete="tel"
           inputMode="tel"
           pattern="[+0-9 ()\-]{6,20}"
@@ -90,11 +101,10 @@ export default function SportelloForm() {
       <Field label="E-mail" htmlFor="sf-email">
         <input id="sf-email" name="email" type="email" required autoComplete="email" className={inputClass} />
       </Field>
-      <Field label="La tua richiesta" htmlFor="sf-messaggio" className="sm:col-span-2">
+      <Field label="La tua richiesta" htmlFor="sf-messaggio" required={false} className="sm:col-span-2">
         <textarea
           id="sf-messaggio"
           name="messaggio"
-          required
           rows={6}
           placeholder="Scrivi qui la tua richiesta"
           className={cn(inputClass, 'resize-y')}
