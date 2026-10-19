@@ -38,7 +38,7 @@ export const TEAM: TeamMember[] = [
     name: 'Margherita Zuecco',
     role: 'Co-founder',
     description:
-      'Psicologa con un interesse specifico per le connessioni tra <b>salute mentale e crisi climatica</b>, collabora a progetti di ricerca sull’eco-ansia e sugli effetti psicologici del cambiamento climatico. Ha maturato esperienza clinica in contesti psicoanalitici e all’interno di servizi pubblici dedicati alle dipendenze, lavorando con adolescenti e adulti in percorsi di sostegno e cura.',
+      'Psicologa clinica con un interesse specifico per le connessioni tra <b>salute mentale e crisi climatica</b>, svolge attività di ricerca sugli effetti psicologici del cambiamento climatico, in particolare nei giovani adulti, in collaborazione con <b>l’Università degli Studi di Padova</b>. Ha maturato esperienza clinica in ambito psicoanalitico, nei servizi pubblici di cura per le <b>dipendenze</b>, tra cui l’ULSS8 Berica, e in comunità terapeutiche. Si dedica inoltre a progetti sulla genitorialità all’interno della Casa Circondariale di Vicenza.',
     image: '/MArghe_zuecco.jpeg',
     zone: 'psy',
   },
