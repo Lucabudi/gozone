@@ -105,6 +105,7 @@ export default function Navbar() {
   }, [menuOpen]);
 
   return (
+    <>
     <header
       className={cn(
         'fixed inset-x-0 top-0 z-50 transition-all duration-300',
@@ -149,12 +150,16 @@ export default function Navbar() {
           {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </nav>
+    </header>
 
-      {/* Mobile panel */}
+      {/*
+        Mobile panel: fratello dell'header, non figlio. Il backdrop-blur dell'header
+        diventerebbe il riferimento del position:fixed e il pannello avrebbe altezza 0.
+      */}
       <div
         id="mobile-menu"
         className={cn(
-          'fixed inset-x-0 top-16 bottom-0 overflow-y-auto bg-cream transition duration-300 md:hidden',
+          'fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto overscroll-contain bg-cream transition duration-300 md:hidden',
           menuOpen ? 'visible translate-y-0 opacity-100' : 'pointer-events-none invisible -translate-y-2 opacity-0',
         )}
       >
@@ -186,6 +191,6 @@ export default function Navbar() {
           <Button className="w-full">Sostienici</Button>
         </div>
       </div>
-    </header>
+    </>
   );
 }
