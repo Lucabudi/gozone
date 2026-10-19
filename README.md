@@ -1,16 +1,36 @@
-# React + Vite
+# Go-Zone – sito web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React 19 + Vite + Tailwind CSS v4 + react-router.
 
-Currently, two official plugins are available:
+```bash
+npm install
+npm run dev        # sviluppo
+npm run typecheck  # controllo TypeScript
+npm run lint       # ESLint (js/ts/tsx)
+npm run build      # build di produzione in dist/
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Struttura
 
-## React Compiler
+```
+src/
+  index.css            design token (@theme) + accenti per zona
+  App.tsx              route
+  data/                contenuti: zone, team, contatti, storie, libri
+  hooks/               useInView, useBodyScrollLock
+  Components/
+    Ui/                primitive condivise: Section, Container, SectionHeader,
+                       Card, FeatureCard, MiniCard, Badge, Button, Prose, FadeIn, Modal…
+    Navbar, Footer, Layout, HeroSection, Aree, Team, BannerSportello,
+    StoriesClimate, SportelloInfo
+  Pages/               una cartella per pagina
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Regole di stile
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Niente colori o stili inline**: usare i token (`brand-*`, `ink`, `muted`, `line`, `cream`, `accent`).
+- **Un solo verde di brand.** Ogni zona ridefinisce solo `--color-accent` con
+  `data-zone="geo|psy|anthro|circular"` sul contenitore; i componenti usano `text-accent`, `bg-accent/10`, ecc.
+- **Ogni pagina** = `HeroSection` + una serie di `Section`, ognuna con `SectionHeader`.
+- **Mobile first**: classi base per il telefono, poi `sm:` / `md:` / `lg:`.
+- **Immagini** in `public/`: hero ≤ 2200px, avatar ≤ 480px.

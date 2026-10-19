@@ -1,210 +1,140 @@
-import React, { useEffect, useState } from 'react';
+import { Globe, Sparkles, Thermometer, Waves, Wind } from 'lucide-react';
 import { HeroSection } from '../../../Components/HeroSection';
-import { Globe, Thermometer, Users, BookOpen, Waves, Wind, Sparkles, ArrowRight } from 'lucide-react';
+import {
+  Badge,
+  Card,
+  FadeIn,
+  FeatureCard,
+  Lead,
+  Prose,
+  Section,
+  SectionHeader,
+  Subheading,
+} from '../../../Components/Ui';
 
-const GeoZone: React.FC = () => {
+const missions = [
+  {
+    icon: <Globe className="h-6 w-6" />,
+    text: 'Comprendere come il cambiamento climatico modifica spazi, ecosistemi, comportamenti e dinamiche fisiche del sistema Terra',
+  },
+  {
+    icon: <Waves className="h-6 w-6" />,
+    text: 'Leggere i territori come sistemi complessi da accompagnare in una transizione ecologica, culturale, urbana e sociale',
+  },
+  {
+    icon: <Wind className="h-6 w-6" />,
+    text: 'Sostenere processi di adattamento e rigenerazione radicati nei contesti reali',
+  },
+  {
+    icon: <Sparkles className="h-6 w-6" />,
+    text: 'Promuovere una nuova alleanza tra scienze naturali, scienze sociali, fisica del clima e discipline del progetto',
+  },
+];
 
-    const [scrollY, setScrollY] = useState(0);
-    const [activeSection, setActiveSection] = useState(0);
+export default function GeoZone() {
+  return (
+    <div data-zone="geo">
+      <HeroSection title="Geo Zone" image="/geozonebackground.jpg" />
 
-    useEffect(() => {
-        const handleScroll = () => setScrollY(window.scrollY);
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-  const missions = [
-    {
-      icon: <Globe className="w-8 h-8" />,
-      text: "Comprendere come il cambiamento climatico modifica spazi, ecosistemi, comportamenti e dinamiche fisiche del sistema Terra",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: <Waves className="w-8 h-8" />,
-      text: "Leggere i territori come sistemi complessi da accompagnare in una transizione ecologica, culturale, urbana e sociale",
-      color: "from-emerald-500 to-teal-500"
-    },
-    {
-      icon: <Wind className="w-8 h-8" />,
-      text: "Sostenere processi di adattamento e rigenerazione radicati nei contesti reali",
-      color: "from-violet-500 to-purple-500"
-    },
-    {
-      icon: <Sparkles className="w-8 h-8" />,
-      text: "Promuovere una nuova alleanza tra scienze naturali, scienze sociali, fisica del clima e discipline del progetto",
-      color: "from-orange-500 to-pink-500"
-    }
-  ];
-
-
-    return (
-        <div className="home-page full-width"> 
-            <HeroSection text="GeoZone" height="80vh" animation={false} backgroundImage="/geozonebackground.jpg" />
-            <div className=" overflow-hidden">
-      {/* Animated Background */}
-      <div className="fixed inset-0 z-0">
-        <div 
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.15) 0%, transparent 50%)',
-            transform: `translateY(${scrollY * 0.3}px)`
-          }}
-        ></div>
-      </div>
-      {/* Hero Section */}
-      <section className="relative z-10  flex items-center justify-center px-8 py-20">
-        <div className="max-w-6xl mx-auto text-center">
-          {/* <div 
-            className="inline-block mb-8"
-            style={{ transform: `translateY(${scrollY * 0.2}px)` }}
-          >
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 blur-3xl opacity-30 animate-pulse"></div>
-              <Globe className="w-24 h-24 relative z-10 mx-auto text-cyan-600" strokeWidth={1.5} />
-            </div>
-          </div> */}
-          
-          <h2 className="text-3xl font-bold text-gray-700 max-w-3xl mx-auto  leading-relaxed ">
-            Leggere il cambiamento, abitare la complessità.
-          </h2>
-        </div>
-      </section>
-
-      {/* Stats Section with Glass Morphism */}
-      <section className="relative z-10 px-6 py-20">
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="backdrop-blur-xl bg-white/80 rounded-3xl p-12 border border-white/40 shadow-2xl shadow-blue-200/50">
-            <div className="">
-              <div className="space-y-8">
-                <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-red-100 to-orange-100 rounded-full border border-red-300">
-                  <Thermometer className="w-6 h-6 text-red-600" />
-                  <span className="text-sm font-semibold text-red-700">EMERGENZA CLIMATICA</span>
-                </div>
-                <div>
-                  <div className="flex items-baseline gap-4 mb-4 justify-center align-center">
-                    <span className="text-7xl font-black bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
-                      20
-                    </span>
-                    <span className="text-5xl font-black text-gray-400">→</span>
-                    <span className="text-7xl font-black bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
-                      37
-                    </span>
-                  </div>
-                  <p className="text-xl text-gray-700 font-bold">
-                    <b>miliardi</b> di tonnellate di emissioni
-                  </p>
-                  <p className="text-sm text-gray-600 mt-2">1990 → 2024</p>
-                </div>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Negli ultimi trent'anni le <strong>emissioni globali</strong> sono quasi raddoppiate: dai 20 miliardi di tonnellate del 1990 siamo arrivati agli attuali <strong>37 miliardi</strong>. L’aumento dei <strong>gas serra</strong>, principale <strong>forcing climatico</strong>, sta alterando l’equilibrio energetico del pianeta e rendendo il clima <strong>instabile</strong>, con effetti noti e altri ancora difficili da prevedere: dalle deviazioni delle correnti oceaniche alle trasformazioni dei paesaggi, dalla perdita di biodiversità alla scomparsa di interi ecosistemi.
-                </p>
-              </div>
-
-              {/* <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-gray-900 mb-8">Alcuni effetti del cambiamento:</h3>
-                {[
-                  "Deviazioni delle correnti oceaniche",
-                  "Trasformazioni dei paesaggi",
-                  "Perdita di biodiversità",
-                  "Scomparsa di interi ecosistemi"
-                ].map((effect, i) => (
-                  <div 
-                    key={i}
-                    className="group flex items-center gap-4 p-4 rounded-xl bg-white/60 border border-gray-200 hover:bg-white hover:border-cyan-400 hover:shadow-lg transition-all duration-300"
-                  >
-                    <div className="w-2 h-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 group-hover:scale-150 transition-transform"></div>
-                    <span className="text-gray-700 group-hover:text-gray-900 transition-colors font-medium">{effect}</span>
-                  </div>
-                ))}
-              </div> */}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="relative z-10 px-6 py-20 justify-center flex">
-        <iframe height={'800px'} width={'90%'} src="https://tulpinteractive.com/goldilocks/" title="TULP interactive - Goldilocks"></iframe>
-      </section>
-
-      {/* Vision Section - Bento Style */}
-      <section className="relative z-10 px-6 py-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8">
-            <div className="lg:col-span-2 backdrop-blur-xl rounded-3xl text-center">
-            <div className="mb-12">
-              <h3 className="text-3xl font-bold mb-6 text-cyan-700 uppercase">Guardare in Faccia alla Realtà</h3>
-              <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                Non significa arrendersi. <br />Al contrario, significa riconoscere che esiste ancora un ampio <b>margine di azione</b>. La sfida non è <strong>evitare </strong>il cambiamento, ma governarlo con intelligenza, orientando le nostre società verso modi di abitare la Terra più <b>giusti, adattivi e consapevoli dei limiti biofisici.</b>
+      {/* Intro + emissioni */}
+      <Section size="md">
+        <SectionHeader as="p" eyebrow="Geo Zone" title="Leggere il cambiamento, abitare la complessità." />
+        <FadeIn>
+          <Card padding="lg" className="text-center">
+            <Badge tone="alert" icon={<Thermometer className="h-4 w-4" />}>
+              Emergenza climatica
+            </Badge>
+            <p className="mt-8 flex items-baseline justify-center gap-3 font-display font-semibold text-red-600 sm:gap-5">
+              <span className="text-6xl leading-none sm:text-7xl">20</span>
+              <span className="text-4xl text-muted sm:text-5xl">→</span>
+              <span className="text-6xl leading-none sm:text-7xl">37</span>
+            </p>
+            <p className="mt-4 text-lg font-semibold text-ink sm:text-xl">miliardi di tonnellate di emissioni</p>
+            <p className="mt-1 text-sm text-muted">1990 → 2024</p>
+            <Prose className="mx-auto mt-8 max-w-3xl">
+              <p>
+                Negli ultimi trent'anni le <strong>emissioni globali</strong> sono quasi raddoppiate: dai 20 miliardi di
+                tonnellate del 1990 siamo arrivati agli attuali <strong>37 miliardi</strong>. L’aumento dei{' '}
+                <strong>gas serra</strong>, principale <strong>forcing climatico</strong>, sta alterando l’equilibrio
+                energetico del pianeta e rendendo il clima <strong>instabile</strong>, con effetti noti e altri ancora
+                difficili da prevedere: dalle deviazioni delle correnti oceaniche alle trasformazioni dei paesaggi, dalla
+                perdita di biodiversità alla scomparsa di interi ecosistemi.
               </p>
-              <p className="text-xl text-gray-700 leading-relaxed">
-                Possiamo — e dobbiamo — scegliere come vivere questa transizione: investendo in <strong>conoscenza</strong>, <strong>immaginazione politica</strong>, <strong>responsabilità collettiva</strong> e <strong>partecipazione comunitaria</strong>.
-              </p>
-            </div>
-              <h5 className="text-3xl font-black mb-6 bg-gradient-to-r from-cyan-600 to-emerald-600 bg-clip-text text-transparent">
-                Per questo, in GEO ZONE dialogano e collaborano due discipline fondamentali:
-              </h5>
-            </div>
-            <div className="backdrop-blur-xl bg-gradient-to-br from-emerald-100/80 to-teal-100/80 rounded-3xl p-10 border border-emerald-200 hover:border-emerald-400 hover:shadow-xl hover:shadow-emerald-200/50 transition-all duration-300 group">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
-                <Globe className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-emerald-700">Geografia</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Come <b>scienza delle relazioni</b> tra luoghi, processi ambientali e comportamenti collettivi
-              </p>
-            </div>
-            <div className="backdrop-blur-xl bg-gradient-to-br from-blue-100/80 to-violet-100/80 rounded-3xl p-10 border border-blue-200 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-200/50 transition-all duration-300 group">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-violet-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
-                <Waves className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-blue-700">Fisica del Clima</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Che studia i <b>meccanismi energetici</b>, le <b>dinamiche atmosferiche</b>, gli <b>scambi radiativi</b> e le forzanti del sistema climatico
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+            </Prose>
+          </Card>
+        </FadeIn>
+      </Section>
 
-      {/* Mission Cards */}
-      <section className="relative z-10 px-6 py-12">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
-              <p className="text-3xl font-bold mb-6">GEO ZONE è l’area dell’associazione dedicata allo studio del cambiamento climatico e dell’attuale crisi in corso, alla comunicazione e divulgazione delle scienze del Sistema Terra, del clima, della geografia, dei territori, della pianificazione ambientale e sociale, dei biomi e degli ecosistemi.</p>
-              <span className="text-xl font-semibold text-gray-700">Attraverso ricerca, formazione, divulgazione e progetti territoriali, ci impegniamo a:</span>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {missions.map((mission, i) => (
-              <div
-                key={i}
-                className="group relative backdrop-blur-xl bg-white/80 rounded-3xl p-10 border border-gray-200 hover:border-gray-300 hover:shadow-2xl transition-all duration-500 hover:scale-105"
-                onMouseEnter={() => setActiveSection(i)}
-              >
-                <div className={`absolute inset-0 bg-gradient-to-br ${mission.color} opacity-0 group-hover:opacity-10 rounded-3xl transition-opacity duration-500`}></div>
-                
-                <div className="relative z-10">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${mission.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-white shadow-lg`}>
-                    {mission.icon}
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <span className={`text-5xl font-black bg-gradient-to-br ${mission.color} bg-clip-text text-transparent`}>
-                      {i + 1}
-                    </span>
-                    <p className="text-lg text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors flex-1 font-medium">
-                      {mission.text}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+      {/* Visualizzazione interattiva */}
+      <Section className="pt-0 md:pt-0">
+        <div className="overflow-hidden rounded-2xl border border-line bg-white shadow-sm md:rounded-3xl">
+          <iframe
+            src="https://tulpinteractive.com/goldilocks/"
+            title="TULP interactive - Goldilocks"
+            loading="lazy"
+            className="block h-[75svh] min-h-[480px] w-full border-0 md:h-[800px]"
+          />
         </div>
-      </section>
-      </div>
+      </Section>
+
+      {/* Guardare in faccia alla realtà */}
+      <Section tone="tint">
+        <FadeIn>
+          <SectionHeader eyebrow="Il nostro sguardo" title="Guardare in faccia alla realtà" />
+        </FadeIn>
+        <Prose className="mx-auto max-w-3xl text-center">
+          <p>
+            Non significa arrendersi. Al contrario, significa riconoscere che esiste ancora un ampio{' '}
+            <b>margine di azione</b>. La sfida non è <strong>evitare</strong> il cambiamento, ma governarlo con
+            intelligenza, orientando le nostre società verso modi di abitare la Terra più{' '}
+            <b>giusti, adattivi e consapevoli dei limiti biofisici.</b>
+          </p>
+          <p>
+            Possiamo — e dobbiamo — scegliere come vivere questa transizione: investendo in <strong>conoscenza</strong>,{' '}
+            <strong>immaginazione politica</strong>, <strong>responsabilità collettiva</strong> e{' '}
+            <strong>partecipazione comunitaria</strong>.
+          </p>
+        </Prose>
+
+        <Subheading className="mx-auto mt-14 mb-8 max-w-3xl text-center">
+          Per questo, in Geo Zone dialogano e collaborano due discipline fondamentali:
+        </Subheading>
+        <div className="grid gap-6 md:grid-cols-2">
+          <FeatureCard icon={<Globe className="h-6 w-6" />} title="Geografia">
+            Come <b className="text-ink">scienza delle relazioni</b> tra luoghi, processi ambientali e comportamenti
+            collettivi
+          </FeatureCard>
+          <FeatureCard icon={<Waves className="h-6 w-6" />} title="Fisica del Clima">
+            Che studia i <b className="text-ink">meccanismi energetici</b>, le{' '}
+            <b className="text-ink">dinamiche atmosferiche</b>, gli <b className="text-ink">scambi radiativi</b> e le
+            forzanti del sistema climatico
+          </FeatureCard>
+        </div>
+      </Section>
+
+      {/* Missioni */}
+      <Section>
+        <FadeIn>
+          <SectionHeader eyebrow="Cosa facciamo" title="Nella Geo Zone" />
+        </FadeIn>
+        <Lead className="mx-auto max-w-3xl text-center">
+          Geo Zone è l’area dell’associazione dedicata allo studio del cambiamento climatico e dell’attuale crisi in
+          corso, alla comunicazione e divulgazione delle scienze del Sistema Terra, del clima, della geografia, dei
+          territori, della pianificazione ambientale e sociale, dei biomi e degli ecosistemi.
+        </Lead>
+        <p className="mx-auto mt-6 mb-10 max-w-3xl text-center font-semibold text-ink">
+          Attraverso ricerca, formazione, divulgazione e progetti territoriali, ci impegniamo a:
+        </p>
+        <div className="grid gap-6 md:grid-cols-2">
+          {missions.map((mission, i) => (
+            <FadeIn key={i} delay={i * 0.05}>
+              <FeatureCard icon={mission.icon} index={i + 1}>
+                {mission.text}
+              </FeatureCard>
+            </FadeIn>
+          ))}
+        </div>
+      </Section>
     </div>
-    );
-};
-
-export default GeoZone;
+  );
+}

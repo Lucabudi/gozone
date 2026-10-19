@@ -1,12 +1,95 @@
-#root {
-  width: 100%;
-  margin: 0;
-  padding: 0;
+@import 'tailwindcss';
+
+/*
+ * Design tokens.
+ * Un solo verde di brand per tutto il sito; ogni zona ridefinisce soltanto
+ * --color-accent (badge, icone, numeri, linea sotto i titoli).
+ */
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Fraunces', Georgia, ui-serif, serif;
+
+  --color-cream: #fbfdf4;
+  --color-ink: #1d2b24;
+  --color-muted: #55665c;
+  --color-line: #e2e8dc;
+
+  --color-brand-50: #eef6f1;
+  --color-brand-100: #d7eadf;
+  --color-brand-200: #b2d3bf;
+  --color-brand-300: #90b791;
+  --color-brand-500: #3f7f63;
+  --color-brand-600: #2e6750;
+  --color-brand-700: #24523f;
+  --color-brand-800: #1b3f31;
+  --color-brand-900: #143026;
+
+  --color-accent: var(--color-brand-600);
+
+  --animate-float: float 9s ease-in-out infinite;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.85;
+    }
+    50% {
+      transform: scale(1.08);
+      opacity: 1;
+    }
+  }
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Previene scroll orizzontale */
-  background-color: #fbfdf4;
+/* Accento per zona: basta un data-zone sul contenitore. */
+[data-zone='geo'] {
+  --color-accent: #1653a3;
+}
+[data-zone='psy'] {
+  --color-accent: #6d3fa0;
+}
+[data-zone='anthro'] {
+  --color-accent: #a14f1c;
+}
+[data-zone='circular'] {
+  --color-accent: #0f766e;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }
