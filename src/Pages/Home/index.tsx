@@ -23,7 +23,8 @@ export default function HomePage() {
         <FadeIn delay={0.1}>
           <h2 className="font-display text-3xl leading-tight font-semibold text-brand-900 sm:text-4xl md:text-5xl">
             Goldilocks Zone <br className="hidden sm:block" />
-            Association for Health and Social Climate Actions
+            Association for Social and Health Climate Actions
+
           </h2>
         </FadeIn>
         <FadeIn delay={0.2}>
